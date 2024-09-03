@@ -36,15 +36,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  [Amac.nl](https://www.amac.nl/)
+  https://www.julianfella.de/
+  https://www.dropbox.com/
+  https://www.shopify.com/ca
+  https://moreair.co/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
-  ![image](https://github.com/user-attachments/assets/ee04be63-3853-46e0-b33e-afa3a5ddfc61)
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Diensten pagina 
-  ![image](https://github.com/user-attachments/assets/60f80cc7-c61e-4c04-938f-913422470f51)
+  ? pagina
 
  
 </details>
