@@ -2,7 +2,7 @@
 ## About Me
 
 <details open>
-  <summary>Before kickoff</summary>
+  <summary>Basic information</summary>
 
   ### Author:
   Xar Boer<br>
@@ -24,12 +24,12 @@
 ## My Website
 
 <details open>
-  <summary>Before kickoff</summary>
+  <summary>Introduction to website</summary>
 
   ### My project:
-  I'm planning to recreate the promotional website for Persona 3 Reload, which can be found here. This site is dedicated to the remake of one of my all-time favorite games, Persona 3, which is part of the Shin Megami Tensei series. I really appreciate this website because it offers a wealth of information about the game, presenting it in a way that mirrors the game's own stylish and unique aesthetic. The design of the site is as captivating as the game itself, with a sleek and modern interface that captures the essence of Persona 3.
+  I'm planning to recreate the promotional [website](https://p3re.jp/en/) for Persona 3 Reload. This site is dedicated to the remake of one of my all-time favorite games, Persona 3, which is part of the Shin Megami Tensei series. I really appreciate this website because it offers information about the game, presenting it in a way that mirrors the game's own stylish and unique aesthetic. The design of the site is as captivating as the game itself, with a sleek and modern interface that captures the essence of Persona 3.
 
-  #### Screenshots first page (small screen): 
+  #### Screenshots first page: 
   Front Page
   <table>
   <tr>
@@ -58,7 +58,7 @@
   </tr>
 </table>
 
-#### Screenshots second page (small screen): 
+#### Screenshots second page: 
 
 **Character Introduction**
 
@@ -79,7 +79,6 @@
 
 _(Persona 3 Reload - Official Website, n.d.)_
 </details>
-
 
 
 ## Toegankelijkheidstest 1/2 (week 1)
@@ -251,6 +250,31 @@ _(Persona 3 Reload - Official Website, n.d.)_
 
 
 
+
+## Exercises
+
+<details open>
+  <summary>Week 1 execises</summary>
+  
+### CodePen blocks:  
+In our first class, we were tasked with copying small blocks using HTML and CSS on [CodePen](https://codepen.io/xarzuth/pen/rNEqPmx), and overall, i think mine turned out well. However, im not entirely satisfied with the flowing effect-I wanted to challenge myself by relying only on what i knew, so i avoided looking things up online to give me support, bu i struggled to create a proper glow. 
+<br>
+Additionally, we had to choose three other blocks from a list. I pcked the highlighted one, the loading one because i was curious about making a spinning wheel with color and pure css, and the Nemo one because i heard it was difficult.
+<table>
+  <tr>
+    <td>
+      <img src="readme-images/CodePen-ex1.png" width="375px" alt="3 blocks showasing my ability to replicate css.">
+      <br>
+      <small>Exercise 1</small>
+    </td>
+    <td>
+      <img src="readme-images/CodePen-ex2.gif" width="375px" alt="3 animated blocks showcasing my ability to replicate animations and css">
+      <br>
+      <small>Exercise 2</small>
+    </td>
+  </tr>
+</table>
+</details>
 
 ## Sources
 
