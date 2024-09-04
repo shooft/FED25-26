@@ -1,7 +1,6 @@
-/*font faces*/
 @font-face {
     font-family: 'Urbanist';
-    src: url('fonts/Urbanist-Regular.ttf') format('truetype');
+    src: url('/fonts/Urbanist-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,14 +19,193 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 :root {
-	--color-text:#111;
-	--color-background:#eee;
+    --text: #1d384a;
 }
 
 
-
-*, *::after, *::before {
-  box-sizing:border-box;  
+html, body {
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
 }
+
+/* header {
+ 
+} */
+
+nav {
+    list-style: none;
+    margin: 0;
+    padding: 2em 1.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+}
+
+nav li:nth-child(6) a {
+    font-weight: normal; 
+}
+
+.separator {
+    height: 1.25em;
+    width: 1px;
+    background-color: #1d384a;
+    margin: 0 10px;
+}
+
+.sale {
+    position: relative;
+    left: 5%;
+    margin: 2em auto;
+}
+
+.sale p {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    line-height: 0.5;
+    color: var(--text)
+}
+
+.sale p:first-of-type {
+    font-size: 1.75rem;
+    margin-bottom: 0.5em;
+}
+
+.sale p:last-of-type {
+    font-size: 2.5rem;
+}
+
+.scroll {
+    font-family: 'Syncopate', sans-serif;
+    text-align: center;
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.trailer {
+    text-align: center;
+    background-color: #DCE9F5;
+    color: #000;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 1.2rem;
+    padding: 5em 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 75vh;
+    transition: background-color 0.3s ease;
+}
+
+.trailer a {
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+}
+
+.trailer:hover {
+    background-color: #295f91;
+}
+
+.trailer a span {
+    display: inline-block;
+    margin-left: 0.5em;
+    transition: transform 0.3s ease;
+}
+
+.trailer:hover a span {
+    transform: translateX(5px);
+}
+
+.buy {
+    text-align: center;
+    margin: 5em 0;
+    padding: 5em 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--text);
+}
+
+.buy a {
+    display: inline-block;
+    background: linear-gradient(to right, #0172B9, #002CB8);
+    color: #fff;
+    text-align: center;
+    padding: 1em 5em;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    width: auto;
+}
+
+.dlc {
+    background-color: #DCE9F5;
+    text-align: center;
+    padding: 5em 0; 
+    margin: 5em 0; 
+}
+
+.dlc p {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 0.75rem; 
+    color: #000;
+    margin: 1em 0;
+    line-height: 1.5; 
+}
+
+.dlc a {
+    display: inline-block;
+    background: linear-gradient(to right, #0172B9, #002CB8);
+    color: #fff;
+    text-align: center;
+    padding: 1em 5em;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    width: auto;
+    margin-top: 1em; 
+}
+
+/* footer {
+
+} */
