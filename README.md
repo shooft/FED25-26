@@ -13,7 +13,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 <details open>
-  <summary>uitwerken voor kick-off werkgroep</summary>
+  <summary>Before kickoff</summary>
 
   ### Auteur:
   Xar Boer
@@ -33,18 +33,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Je website
 
 <details open>
-  <summary>uitwerken voor kick-off werkgroep</summary>
+  <summary>Before kickoff</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  I'm planning to recreate the promotional website for Persona 3 Reload, which can be found here. This site is dedicated to the remake of one of my all-time favorite games, Persona 3, which is part of the Shin Megami Tensei series. I really appreciate this website because it offers a wealth of information about the game, presenting it in a way that mirrors the game's own stylish and unique aesthetic. The design of the site is as captivating as the game itself, with a sleek and modern interface that captures the essence of Persona 3.
 
-  #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  #### Screenshots first page (small screen): 
+  Front Page
+  <img src="readme-images/front-page-readme.jpg" width="375px" alt="The front page of the Persona 3 Reload promotional website, featuring the game’s logo and main navigation elements..">
+  <img src="readme-images/loading-frontpage-readme.jpg" width="375px" alt="The loading screen displayed before the Persona 3 Reload website fully loads, showing an small animation and a quote about Momento Mori">
+  <img src="readme-images/introduction-section-readme.jpg" width="375px" alt="An introduction about the game with features and the system explained.">
+  <img src="readme-images/character-selection-readme.jpg" width="375px" alt="The character section of the Persona 3 Reload website, showingcasing the main characters in the game.">
+  <img src="readme-images/change-character-selection-readme.jpg" width="375px" alt="The character section where scrolling changes the background color to match the selected character.">
+  <img src="readme-images/inbetween-charachters-readme.jpg" width="375px" alt="The section of the Persona 3 Reload website featuring the game’s villains, displayed in a similar fashion to the main characters.">
 
-  #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  #### Screenshots second page (small screen):
+  Character introduction  
+  <img src="readme-images/character-page-readme.jpg" width="375px" alt="The character detail page of the Persona 3 Reload website, displaying the selected character’s name, a brief description, voice actor, trailer, and multiple images of the character.">
+  <img src="readme-images/changevisuals-character-page-readme.jpg" width="375px" alt="A button on the Persona 3 Reload website used to change the visual representation of the character picture.">
  
 </details>
 
