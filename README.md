@@ -1,27 +1,18 @@
-# Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
-
-
-## Jij
+## About Me
 
 <details open>
   <summary>Before kickoff</summary>
 
-  ### Auteur:
-  Xar Boer
+  ### Author:
+  Xar Boer<br>
+  Second year CMD student<br>
+  they/them<br>
 
-  #### Je startniveau:
+  #### My starting level:
   Red/Black
 
-  #### Je focus:
+  #### My focus:
   Surface plane
  
 </details>
@@ -30,28 +21,75 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
-## Je website
+## My Website
 
 <details open>
   <summary>Before kickoff</summary>
 
-  ### Je opdracht:
+  ### My project:
   I'm planning to recreate the promotional website for Persona 3 Reload, which can be found here. This site is dedicated to the remake of one of my all-time favorite games, Persona 3, which is part of the Shin Megami Tensei series. I really appreciate this website because it offers a wealth of information about the game, presenting it in a way that mirrors the game's own stylish and unique aesthetic. The design of the site is as captivating as the game itself, with a sleek and modern interface that captures the essence of Persona 3.
 
   #### Screenshots first page (small screen): 
   Front Page
-  <img src="readme-images/front-page-readme.jpg" width="375px" alt="The front page of the Persona 3 Reload promotional website, featuring the game’s logo and main navigation elements..">
-  <img src="readme-images/loading-frontpage-readme.jpg" width="375px" alt="The loading screen displayed before the Persona 3 Reload website fully loads, showing an small animation and a quote about Momento Mori">
-  <img src="readme-images/introduction-section-readme.jpg" width="375px" alt="An introduction about the game with features and the system explained.">
-  <img src="readme-images/character-selection-readme.jpg" width="375px" alt="The character section of the Persona 3 Reload website, showingcasing the main characters in the game.">
-  <img src="readme-images/change-character-selection-readme.jpg" width="375px" alt="The character section where scrolling changes the background color to match the selected character.">
-  <img src="readme-images/inbetween-charachters-readme.jpg" width="375px" alt="The section of the Persona 3 Reload website featuring the game’s villains, displayed in a similar fashion to the main characters.">
+  <table>
+  <tr>
+    <td>
+      <img src="readme-images/front-page-readme.png" width="375px" alt="The front page of the Persona 3 Reload promotional website, featuring the game’s logo and main navigation elements.">
+      <br>
+      <small>Front Page</small>
+    </td>
+    <td>
+      <img src="readme-images/loading-frontpage-readme.png" width="375px" alt="The loading screen displayed before the Persona 3 Reload website fully loads, showing a small animation and a quote about Momento Mori">
+      <br>
+      <small>Loading Screen</small>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="readme-images/introduction-section-readme.png" width="375px" alt="An introduction about the game with features and the system explained.">
+      <br>
+      <small>Introduction Section</small>
+    </td>
+    <td>
+      <img src="readme-images/character-selection-readme.png" width="375px" alt="The character section of the Persona 3 Reload website, showcasing the main characters in the game.">
+      <br>
+      <small>Character Selection</small>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="readme-images/change-character-selection-readme.png" width="375px" alt="The character section where scrolling changes the background color to match the selected character.">
+      <br>
+      <small>Change Character Selection</small>
+    </td>
+    <td>
+      <img src="readme-images/inbetween-charachters-readme.png" width="375px" alt="The section of the Persona 3 Reload website featuring the game’s villains, displayed in a similar fashion to the main characters.">
+      <br>
+      <small>Inbetween Characters</small>
+    </td>
+  </tr>
+</table>
 
-  #### Screenshots second page (small screen):
-  Character introduction  
-  <img src="readme-images/character-page-readme.jpg" width="375px" alt="The character detail page of the Persona 3 Reload website, displaying the selected character’s name, a brief description, voice actor, trailer, and multiple images of the character.">
-  <img src="readme-images/changevisuals-character-page-readme.jpg" width="375px" alt="A button on the Persona 3 Reload website used to change the visual representation of the character picture.">
- 
+#### Screenshots second page (small screen): 
+
+**Character Introduction**
+
+<table>
+  <tr>
+    <td>
+      <img src="readme-images/character-page-readme.png" width="375px" alt="The character detail page of the Persona 3 Reload website, displaying the selected character’s name, a brief description, voice actor, trailer, and multiple images of the character.">
+      <br>
+      <small>Character Detail Page</small>
+    </td>
+    <td>
+      <img src="readme-images/changevisuals-character-page-readme.png" width="375px" alt="A button on the Persona 3 Reload website used to change the visual representation of the character picture.">
+      <br>
+      <small>Change Visual Button</small>
+    </td>
+  </tr>
+</table>
+
+_(Persona 3 Reload - Official Website, n.d.)_
 </details>
 
 
@@ -226,17 +264,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
-## Bronnenlijst
+## Sources
 
 <details open>
-  <summary>continu bijhouden terwijl je werkt</summary>
-
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
-
-  1. bron 1
-  2. bron 2
-  3. ...
+  Persona 3 Reload - Official Website. (n.d.). Persona 3 Reload - Official Website. https://p3re.jp/en/
 
 </details>
