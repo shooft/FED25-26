@@ -39,33 +39,21 @@
       <small>Front Page</small>
     </td>
     <td>
-      <img src="readme-images/loading-frontpage-readme.png" width="375px" alt="The loading screen displayed before the Persona 3 Reload website fully loads, showing a small animation and a quote about Momento Mori">
+      <img src="readme-images/loading-frontpage-readme.gif" width="375px" alt="The loading screen displayed before the Persona 3 Reload website fully loads, showing a small animation and a quote about Momento Mori">
       <br>
       <small>Loading Screen</small>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="readme-images/introduction-section-readme.png" width="375px" alt="An introduction about the game with features and the system explained.">
+      <img src="readme-images/introduction-section-readme.gif" width="375px" alt="An introduction about the game with features and the system explained.">
       <br>
       <small>Introduction Section</small>
     </td>
     <td>
-      <img src="readme-images/character-selection-readme.png" width="375px" alt="The character section of the Persona 3 Reload website, showcasing the main characters in the game.">
+      <img src="readme-images/character-selection-readme.gif" width="375px" alt="The character section of the Persona 3 Reload website, showcasing the main characters in the game.">
       <br>
-      <small>Character Selection</small>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="readme-images/change-character-selection-readme.png" width="375px" alt="The character section where scrolling changes the background color to match the selected character.">
-      <br>
-      <small>Change Character Selection</small>
-    </td>
-    <td>
-      <img src="readme-images/inbetween-charachters-readme.png" width="375px" alt="The section of the Persona 3 Reload website featuring the game’s villains, displayed in a similar fashion to the main characters.">
-      <br>
-      <small>Inbetween Characters</small>
+      <small>Character Showcase</small>
     </td>
   </tr>
 </table>
