@@ -274,6 +274,9 @@ Additionally, we had to choose three other blocks from a list. I pcked the highl
     </td>
   </tr>
 </table>
+
+### CodePen Grid:
+second third class we had to work with grid, [here](https://codepen.io/xarzuth/pen/oNrJwdM) is exersise 2 
 </details>
 
 ## Sources
