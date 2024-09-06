@@ -61,6 +61,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  ![IMG_4524](https://github.com/user-attachments/assets/1671c2eb-9dc1-4f4e-84a4-aef8d644277e)
+  ![IMG_4525](https://github.com/user-attachments/assets/585d0fc1-68b8-40d9-be7d-39b970855236)
+  ![IMG_4526](https://github.com/user-attachments/assets/691413b7-1f84-4e50-ab07-71407dbd1b08)
+  ![IMG_4527](https://github.com/user-attachments/assets/c79849c8-007d-48c1-a3f0-70a040219ff7)
+  ![IMG_4528](https://github.com/user-attachments/assets/4cdd3d6b-c802-4376-a3a8-53e8e9589792)
+
+  Lijst met eigen ondervindingen (screenreader):
+  - Navigatie bar is raar. Zegt wel de link, maar niet dat je in de navigatie zit. Het is ook geen aparte stap om in de navigatie te komen. Deze zit een soort hidden op de pagina.
+  - De header (titel) wordt alleen in letters gezegd, niet als heel woord.
+  - De pagina wordt blanko als je met de screenreader verder naar beneden navigeert.
+  - Hij zegt de industries 1 voor 1 (onnodig).
+  - Getallen worden gezegd als vijf nul plus i.p.v. vijftig plus.
+  - De afbeeldingen van de brandings worden niet uitgesproken. Alleen dat het een element is.
+  - Link wordt niet benoemd als link.
 
 </details>
 
