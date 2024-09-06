@@ -63,6 +63,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  
   <img src="https://github.com/user-attachments/assets/1671c2eb-9dc1-4f4e-84a4-aef8d644277e" alt="WCAG checklist" width="375px">
   <img src="https://github.com/user-attachments/assets/585d0fc1-68b8-40d9-be7d-39b970855236" alt="WCAG checklist" width="375px">
   <img src="https://github.com/user-attachments/assets/691413b7-1f84-4e50-ab07-71407dbd1b08" alt="WCAG checklist" width="375px">
@@ -92,10 +93,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="https://github.com/user-attachments/assets/f08093b3-12c7-40e0-a32e-95770de83316" alt="Breakdown van de hele pagina" width="200px">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="https://github.com/user-attachments/assets/3d32c233-7e84-42cd-86c6-1dbe2e9787e7" alt="Breakdown van een dynamisch deel" width="375px">
+  <img src="https://github.com/user-attachments/assets/50ce31e8-a6fb-4dee-b3bc-a721e1bb6576" alt="Breakdown van een dynamisch deel" width="375px">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="https://github.com/user-attachments/assets/734a5056-a611-4b72-afd5-fef422042eac" alt="breakdown van nog een dynamisch deel" width="375px">
+  <img src="https://github.com/user-attachments/assets/7eaa6469-7591-402d-b340-69e2df1ae720" alt="breakdown van nog een dynamisch deel" width="375px">
 
 </details>
 
