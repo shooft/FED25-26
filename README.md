@@ -277,6 +277,7 @@ Additionally, we had to choose three other blocks from a list. I pcked the highl
 
 ### CodePen Grid:
 second third class we had to work with grid, [here](https://codepen.io/xarzuth/pen/oNrJwdM) is exersise 2 
+<img src="readme-images/Screenshot 2024-09-06 145901.png" width="375px">
 </details>
 
 ## Sources
