@@ -40,19 +40,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
-  <img src="https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588" alt="Homepagina" width="375px">
-  <img src= url(https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588)
- width="375px" alt="breakdown van de hele pagina">
-  <img src="![image](https://github.com/user-attachments/assets/d92d9506-f27c-4f0c-819c-0108508bcc46)
-" width="375px" alt="breakdown van de hele pagina">
+  <img src="https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588" alt="Homepagina" width="200px">
+  <img src="https://github.com/user-attachments/assets/d92d9506-f27c-4f0c-819c-0108508bcc46" alt="Homepagina" width="375px">
 
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Work pagina
-  <img src="![image](https://github.com/user-attachments/assets/d6298d89-b298-44c9-80de-b56f0e963d40)
-" width="375px" alt="breakdown van de hele pagina">
-  <img src="![image](https://github.com/user-attachments/assets/3d4130ce-7451-4f9b-ab55-f3af103fc29e)
-" width="375px" alt="breakdown van de hele pagina">
+  <img src="https://github.com/user-attachments/assets/d6298d89-b298-44c9-80de-b56f0e963d40" alt="Workpagina" width="200px">
+  <img src="https://github.com/user-attachments/assets/3d4130ce-7451-4f9b-ab55-f3af103fc29e" alt="Workpagina" width="375px">
 
  
 </details>
