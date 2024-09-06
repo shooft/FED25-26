@@ -40,7 +40,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
-  <img src="[pic_trulli.jpg](https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588)" alt="Homepagina">
+  <img src="https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588" alt="Homepagina">
   <img src= url(https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588)
  width="375px" alt="breakdown van de hele pagina">
   <img src="![image](https://github.com/user-attachments/assets/d92d9506-f27c-4f0c-819c-0108508bcc46)
