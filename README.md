@@ -40,12 +40,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
+  
   <img src="https://github.com/user-attachments/assets/e6db875e-a4d7-4005-a341-f6000efa9588" alt="Homepagina" width="200px">
   <img src="https://github.com/user-attachments/assets/d92d9506-f27c-4f0c-819c-0108508bcc46" alt="Homepagina" width="375px">
 
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Work pagina
+  
   <img src="https://github.com/user-attachments/assets/d6298d89-b298-44c9-80de-b56f0e963d40" alt="Workpagina" width="200px">
   <img src="https://github.com/user-attachments/assets/3d4130ce-7451-4f9b-ab55-f3af103fc29e" alt="Workpagina" width="375px">
 
@@ -61,16 +63,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-  <img src="![IMG_4524](https://github.com/user-attachments/assets/1671c2eb-9dc1-4f4e-84a4-aef8d644277e)
-" width="375px" alt="breakdown van de hele pagina">
-<img src="![IMG_4525](https://github.com/user-attachments/assets/585d0fc1-68b8-40d9-be7d-39b970855236)
-" width="375px" alt="breakdown van de hele pagina">
-<img src="![IMG_4526](https://github.com/user-attachments/assets/691413b7-1f84-4e50-ab07-71407dbd1b08)
-" width="375px" alt="breakdown van de hele pagina">
-<img src="![IMG_4527](https://github.com/user-attachments/assets/c79849c8-007d-48c1-a3f0-70a040219ff7)
-" width="375px" alt="breakdown van de hele pagina">
-<img src="![IMG_4528](https://github.com/user-attachments/assets/4cdd3d6b-c802-4376-a3a8-53e8e9589792)
-" width="375px" alt="breakdown van de hele pagina">
+  <img src="https://github.com/user-attachments/assets/1671c2eb-9dc1-4f4e-84a4-aef8d644277e" alt="WCAG checklist" width="375px">
+  <img src="https://github.com/user-attachments/assets/585d0fc1-68b8-40d9-be7d-39b970855236" alt="WCAG checklist" width="375px">
+  <img src="https://github.com/user-attachments/assets/691413b7-1f84-4e50-ab07-71407dbd1b08" alt="WCAG checklist" width="375px">
+  <img src="https://github.com/user-attachments/assets/c79849c8-007d-48c1-a3f0-70a040219ff7" alt="WCAG checklist" width="375px">
+  <img src="https://github.com/user-attachments/assets/4cdd3d6b-c802-4376-a3a8-53e8e9589792" alt="WCAG checklist" width="375px">
+  
 
   Lijst met eigen ondervindingen (screenreader):
   - Navigatie bar is raar. Zegt wel de link, maar niet dat je in de navigatie zit. Het is ook geen aparte stap om in de navigatie te komen. Deze zit een soort hidden op de pagina.
@@ -91,8 +89,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="![image](https://github.com/user-attachments/assets/f08093b3-12c7-40e0-a32e-95770de83316)
-" width="375px" alt="breakdown van de hele pagina">
+  <img src="https://github.com/user-attachments/assets/f08093b3-12c7-40e0-a32e-95770de83316" alt="Breakdown van de hele pagina" width="200px">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
