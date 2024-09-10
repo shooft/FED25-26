@@ -37,6 +37,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   https://moreair.co/
+  https://moreair.co/case-study/cobot-brand-system
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepagina
@@ -48,9 +49,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de tweede pagina (small screen):
   Work pagina
   
-  <img src="https://github.com/user-attachments/assets/d6298d89-b298-44c9-80de-b56f0e963d40" alt="Workpagina" width="200px">
-  <img src="https://github.com/user-attachments/assets/3d4130ce-7451-4f9b-ab55-f3af103fc29e" alt="Workpagina" width="375px">
-
+  <img src="https://github.com/user-attachments/assets/67b4dfd3-ce11-4364-9ded-f2186941274b" alt="Workpagina" width="200px">
+  <img src="https://github.com/user-attachments/assets/00c7dc60-22e9-4f1b-ae3f-b5421a3278e4" alt="Workpagina" width="375px">
+  
  
 </details>
 
@@ -118,7 +119,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Sharon         | Audrey             | Jelle        | Kaylee           |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
