@@ -124,14 +124,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik had even een uitdaging met het invoegen van mijn extra HTML naar github. Dit is uiteindelijk wel gelukt aangezien ik op een andere knop heb gedrukt die hetzelfde zou moeten doen. Deze werkte wel terwijl de andere knop ook had moeten werken, maar uiteindelijk is alles goed gekomen.
   <img src="https://github.com/user-attachments/assets/326cf20d-1fed-4a3d-a86a-803f0b613bfc" alt="Screenshot van de niet werkende knop" width="375px">
   <img src="https://github.com/user-attachments/assets/dac40aa1-e4f0-4895-9477-61b3fe4e4fab" alt="Screenshot van de werkende knop" width="375px">
+  - Op de website is er geen svg die ik kan downloaden voor de sociale media. Ik heb gezien dat de volledige svg werkt, maar als ik het convert naar svg file werkt hij niet meer.
+  <img src="https://github.com/user-attachments/assets/8c0f41ce-9af2-4df1-ba13-c94c8f882f11" alt="Screenshot van de niet werkende sociale media" width="375px">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
   | Sharon         | Audrey             | Jelle        | Kaylee           |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | dit bespreken  | en dit             | en ik dit    | svg omzetten     |
+  | en dat ook nog | dit als er tijd is | nog een punt |                  |
   | ...            | ...                | ...          | ...              |
 
 
@@ -263,8 +265,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. Amac.nl (ss)
-  2. bron 2
-  3. ...
+  1. De website die ik na maak.
+  https://moreair.co/
+  2. Wat kan je i.p.v. alt bij een image gebruiken voor bij een video?
+  https://discuss.codecademy.com/t/can-we-use-an-alt-attribute-with-the-video-tag/300322/4
+  3. 
 
 </details>
