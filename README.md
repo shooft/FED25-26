@@ -37,6 +37,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je opdracht:
   https://moreair.co/
+  
   https://moreair.co/case-study/cobot-brand-system
 
   #### Screenshot(s) van de eerste pagina (small screen): 
@@ -115,6 +116,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  ### Ging goed:
+  - Het opzetten van mijn HTML bestanden ging goed. Door de breakdown schetsen kreeg ik meteen een beter beeld van hoe de HTML structuur in elkaar stak en daarom was het aanmaken van deze bestanden ook niet heel gemoeilijk.
+  <img src="https://github.com/user-attachments/assets/f6cd5a0b-870b-4818-8711-247b0843a548" alt="Screenshot van mijn homepagina die ik in HTML heb gecodeert." width="375px">
+
+  ### Dit was lastig:
+  - Ik had even een uitdaging met het invoegen van mijn extra HTML naar github. Dit is uiteindelijk wel gelukt aangezien ik op een andere knop heb gedrukt die hetzelfde zou moeten doen. Deze werkte wel terwijl de andere knop ook had moeten werken, maar uiteindelijk is alles goed gekomen.
+  <img src="https://github.com/user-attachments/assets/326cf20d-1fed-4a3d-a86a-803f0b613bfc" alt="Screenshot van de niet werkende knop" width="375px">
+  <img src="https://github.com/user-attachments/assets/dac40aa1-e4f0-4895-9477-61b3fe4e4fab" alt="Screenshot van de werkende knop" width="375px">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
