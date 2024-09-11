@@ -130,11 +130,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Sharon         | Audrey             | Jelle        | Kaylee           |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | svg omzetten     |
-  | en dat ook nog | dit als er tijd is | nog een punt |                  |
-  | ...            | ...                | ...          | ...              |
+  | Sharon         | Audrey             | Jelle        | Kaylee            |
+  | ---            | ---                | ---          | ---               |
+  | dit bespreken  | en dit             | en ik dit    | svg omzetten?     |
+  | en dat ook nog | dit als er tijd is | nog een punt | hoe een video continu af laten spelen?|
+  | ...            | ...                | ...          | ...               |
 
 
   ### Verslag van meeting
