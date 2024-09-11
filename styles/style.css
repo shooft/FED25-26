@@ -6,26 +6,41 @@
 }
 
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: rgb(21, 22, 20);
+	--color-background: rgb(235, 255, 241);
 }
 
+@font-face {
+	font-family: "PP-Mori-Light";
+	src: url('/font/PPMori-Light.0f42b11c.woff2');
+}
 
+@font-face {
+	font-family: "PP-Mori-Regular";
+	src: url('/font/PPMori-Regular.b106d8fe.woff2');
+}
 
+@font-face {
+	font-family: "PP-Mori-SemiBold";
+	src: url('/font/PPMori-SemiBold.ab48fc0e.woff2');
+}
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
+h1 {
+	font-family: "PP-Mori-SemiBold";
+}
 
-/* jouw code */
+h2, h3, h4 {
+	font-family: "PP-Mori-Regular";
+}
 
+p {
+	font-family: "PP-Mori-Light";
+}
