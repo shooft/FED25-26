@@ -134,7 +134,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | ---                 | ---                  | ---               | ---                                   |
   | No horizontal scroll| juiste tags gebruikt?|                   | svg omzetten?                         |
   |                     | Beter in html of css?|                   | hoe een video continu af laten spelen?|
-  | ...                 | ...                  | ...               | ...                                   |
 
 
   ### Verslag van meeting
