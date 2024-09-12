@@ -143,7 +143,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Meerdere navigatie mag als dat van toepassing is.
   - Het liefst altijd werken met sections en articles.
   - Class en Id mag net zo goed als firstchild en lastchild etc.
-  - ...
+  - SVG's kunnen in zijn geheel in de link en hoeft niet in een image tag.
+  - Om de video te kunnen afspelen moet er nog wat extra code bij om dit aan te geven zoals de type aan te duiden en autoplay te benoemen.
+
+  ### Feedback 1ste voortgangsgesprek:
+  HTML/Code: Voor het video element moet je nog even goed lezen hoe dit werkt. Netjes semantische code en ook goed ingesprongen, maar op sommige stukjes kan je nog extra 
+  spaties toevoegen. Goed bezig met de SVG's. Probeer duidelijke namen te bedenken voor classes.
 
 </details>
 
