@@ -130,19 +130,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Sharon         | Audrey               | Jelle             | Kaylee                                |
-  | ---            | ---                  | ---               | ---                                   |
-  | dit bespreken  | juiste tags gebruikt?|                   | svg omzetten?                         |
-  | en dat ook nog | Beter in html of css?|                   | hoe een video continu af laten spelen?|
-  | ...            | ...                  | ...               | ...                                   |
+  | Sharon              | Audrey               | Jelle             | Kaylee                                |
+  | ---                 | ---                  | ---               | ---                                   |
+  | No horizontal scroll| juiste tags gebruikt?|                   | svg omzetten?                         |
+  |                     | Beter in html of css?|                   | hoe een video continu af laten spelen?|
+  | ...                 | ...                  | ...               | ...                                   |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Meerdere navigatie mag als dat van toepassing is.
+  - Het liefst altijd werken met sections en articles.
+  - Class en Id mag net zo goed als firstchild en lastchild etc.
   - ...
 
 </details>
