@@ -28,99 +28,109 @@
 
 
 :root {
-    --text: #1d384a;
+    --font-main: 'Urbanist', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --font-tertiary: 'Syncopate', sans-serif;
+    --text-color: #1d384a; 
+    --background-color-main: #DCE9F5;
+    --background-color-secondary: #fff;
+    --background-color-tertiary: #C0d5E8;
+    --button-gradient: linear-gradient(to right, #0172B9, #002CB8);
+    --font-size-base: 1rem;
+    --font-size-link: 1.2rem;
+    --font-size-heading: 5rem;
+    --line-height-base: 1.5;
 }
 
-
+/* Global styles */
 html, body {
-    font-family: 'Urbanist', sans-serif;
+    font-family: var(--font-main);
     margin: 0;
     padding: 0;
-    height: 100%; 
+    height: 100%;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
 }
 
-/* header {
- 
-} */
-
+/* Navigation styles */
 nav {
-    list-style: none;
+    list-style: none; /* Remove default list styling */
     margin: 0;
-    padding: 2em 1.5em;
+    padding: 2em 1.5em; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 nav ul {
-    list-style: none; 
+    list-style: none; /* Remove default list styling */
     margin: 0;
     padding: 0;
     display: flex; 
+}
+
+nav a {
+    color: var(--text-color); 
+    text-decoration: none;
+    padding: 0 1em; 
+    font-size: var(--font-size-link); 
+    letter-spacing: 0.05em; 
+    font-weight: bold;
 }
 
 nav li {
     margin: 0;
 }
 
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    padding: 0 1em;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
-    font-weight: bold;
-}
-
 nav li:nth-child(6) a {
-    font-weight: normal; 
+    font-weight: normal; /* Normal weight for specific nav item */
 }
 
-.separator {
+nav li.separator {
     height: 1.25em;
     width: 1px;
-    background-color: #1d384a;
+    background-color: var(--text-color); 
     margin: 0 10px;
 }
 
-.sale {
+/* Persona 3 Reload on sale now */
+aside {
     position: relative;
     left: 5%;
     margin: 2em auto;
 }
 
-.sale p {
-    font-family: 'Playfair Display', serif;
+aside p {
+    font-family: var(--font-secondary);
     margin: 0;
-    line-height: 0.5;
-    color: var(--text)
+    line-height: 1.2;
+    color: var(--text-color); 
 }
 
-.sale p:first-of-type {
+aside p:first-of-type {
     font-size: 1.75rem;
     margin-bottom: 0.5em;
 }
 
-.sale p:last-of-type {
+aside p:last-of-type {
     font-size: 2.5rem;
 }
 
-.scroll {
-    font-family: 'Syncopate', sans-serif;
+/* Scroll text */
+div:nth-of-type(1) p {
+    font-family: var(--font-tertiary);
+    font-size: 1rem;
     text-align: center;
+    color: var(--text-color); 
 }
 
-.scroll-text {
-    font-size: 0.75rem;
+/* Trailer section */
+div:nth-of-type(2) {
     text-align: center;
-}
-
-.trailer {
-    text-align: center;
-    background-color: #DCE9F5;
-    color: #000;
-    font-family: 'Syncopate', sans-serif;
-    font-size: 1.2rem;
+    background-color: var(--background-color-main);
+    color: var(--text-color); 
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-link);
     padding: 5em 0;
     width: 100%;
     box-sizing: border-box;
@@ -129,8 +139,8 @@ nav li:nth-child(6) a {
     transition: background-color 0.3s ease;
 }
 
-.trailer a {
-    color: #000;
+div:nth-of-type(2) a {
+    color: var(--text-color); 
     text-decoration: none;
     border-radius: 5px;
     line-height: 1.2;
@@ -138,73 +148,132 @@ nav li:nth-child(6) a {
     display: inline-block;
 }
 
-.trailer:hover {
+div:nth-of-type(2):hover {
     background-color: #295f91;
 }
 
-.trailer a span {
+div:nth-of-type(2) a span {
     display: inline-block;
     margin-left: 0.5em;
     transition: transform 0.3s ease;
 }
 
-.trailer:hover a span {
+div:nth-of-type(2):hover a span {
     transform: translateX(5px);
 }
 
-.buy {
+/* Buy now section */
+article:nth-of-type(1) {
     text-align: center;
     margin: 5em 0;
     padding: 5em 0;
 }
 
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 5rem;
-    color: var(--text);
+article:nth-of-type(1) h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-heading);
+    color: var(--text-color); 
 }
 
-.buy a {
+article:nth-of-type(1) a {
     display: inline-block;
-    background: linear-gradient(to right, #0172B9, #002CB8);
-    color: #fff;
+    background: var(--button-gradient);
+    color: var(--background-color-secondary);
     text-align: center;
     padding: 1em 5em;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.2rem;
+    font-family: var(--font-main);
+    font-size: var(--font-size-link);
     text-decoration: none;
     border-radius: 50px;
     width: auto;
 }
 
-.dlc {
-    background-color: #DCE9F5;
+/* DLC section */
+article:nth-of-type(2) {
+    background-color: var(--background-color-main);
     text-align: center;
     padding: 5em 0; 
-    margin: 5em 0; 
+    margin: 0; 
 }
 
-.dlc p {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 0.75rem; 
-    color: #000;
+article:nth-of-type(2) h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-heading);
+    color: var(--text-color);
+}
+
+article:nth-of-type(2) p {
+    font-family: var(--font-main);
+    font-size: 1rem; 
+    color: var(--text-color); 
     margin: 1em 0;
-    line-height: 1.5; 
+    line-height: var(--line-height-base); 
 }
 
-.dlc a {
+article:nth-of-type(2) a {
     display: inline-block;
-    background: linear-gradient(to right, #0172B9, #002CB8);
+    background: var(--button-gradient);
     color: #fff;
     text-align: center;
     padding: 1em 5em;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.2rem;
+    font-family: var(--font-main);
+    font-size: var(--font-size-link);
     text-decoration: none;
     border-radius: 50px;
     width: auto;
     margin-top: 1em; 
 }
+
+/* Details section */
+section {
+    background-color: var(--background-color-tertiary);
+    padding: 5em 0;
+}
+
+section article {
+    /* background-color: var(--background-color-tertiary); */
+    text-align: center;
+    margin: 5em 0;
+    padding: 5em 0;
+}
+
+section article h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-heading);
+    color: var(--text-color);
+}
+
+section article p {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 1em 0;
+    line-height: var(--line-height-base);
+}
+
+section article a {
+    display: inline-block;
+    background: var(--button-gradient);
+    color: #fff;
+    text-align: center;
+    padding: 1em 5em;
+    font-family: var(--font-main);
+    font-size: var(--font-size-link);
+    text-decoration: none;
+    border-radius: 50px;
+    width: auto;
+    margin-top: 1em;
+}
+
+/* Dark hour inspo text */
+section div {
+    text-align: center;
+    font-family: var(--font-tertiary);
+    font-size: 0.75rem;
+    color: var(--text-color);
+    margin: 2em 0;
+}
+
 
 /* footer {
 
