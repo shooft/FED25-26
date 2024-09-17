@@ -13,23 +13,32 @@
 
 <body>
     <header>
-		<a href="index.html"><img src="images/logoBlack.svg" alt="Logo More Air."></a>
 		<nav>
-			<input type="checkbox">
-			<label for="check">
-				<i></i>
+			<a id="logo" href="index.html"><img src="images/logoBlack.svg" alt="Logo More Air."></a>
+			<input id="toggle" type="checkbox" aria-hidden="true" />
+			<label class="hamburger" for="toggle" aria-hidden="true">
+				<!-- Unchecked state -->
+				<svg class="unchecked" width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+					<path d='M25 23.5L7 23.5' stroke='#151614' stroke-width='2.65' stroke-linecap='round'/>
+					<path d='M25 8.5L7 8.5' stroke='#151614' stroke-width='2.65' stroke-linecap='round'/>
+					<path d='M25 16L7 16' stroke='#151614' stroke-width='2.65' stroke-linecap='round'/>
+				</svg>
+				<!-- Checked state -->
+				<svg class="checked" width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+					<path d='M7.51465 7.51465L24.4852 24.4852' stroke='white' stroke-width='2.65' stroke-linecap='round'/>
+					<path  d='M24.4851 7.51465L7.51454 24.4852' stroke='white' stroke-width='2.65' stroke-linecap='round'/>
+				</svg>
 			</label>
-			<ol>
-				<li>
-					<a href="index.html">About</a>
-				</li>
-				<li>
-					<a href="work.html">Work</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-			</ol>
+		
+			<div class="nav">
+				<div class="nav-wrapper">
+					<nav>
+						<a href="index.html">About</a>
+						<a href="work.html">Work</a>
+						<a href="#">Contact</a>
+					</nav>
+				</div>
+			</div>
 		</nav>
     </header>
     <main>

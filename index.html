@@ -14,50 +14,71 @@
 
 <body>
 	<header>
-		<a href="index.html"><img src="images/logoBlack.svg" alt="Logo More Air."></a>
 		<nav>
-			<input type="checkbox">
-			<label for="check">
-				<i></i>
+			<a id="logo" href="index.html"><img src="images/logoBlack.svg" alt="Logo More Air."></a>
+			<input id="toggle" type="checkbox" aria-hidden="true" />
+			<label class="hamburger" for="toggle" aria-hidden="true">
+				<!-- Unchecked state -->
+				<svg class="unchecked" width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+					<path d='M25 23.5L7 23.5' stroke='#151614' stroke-width='2.65' stroke-linecap='round'/>
+					<path d='M25 8.5L7 8.5' stroke='#151614' stroke-width='2.65' stroke-linecap='round'/>
+					<path d='M25 16L7 16' stroke='#151614' stroke-width='2.65' stroke-linecap='round'/>
+				</svg>
+				<!-- Checked state -->
+				<svg class="checked" width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+					<path d='M7.51465 7.51465L24.4852 24.4852' stroke='white' stroke-width='2.65' stroke-linecap='round'/>
+					<path  d='M24.4851 7.51465L7.51454 24.4852' stroke='white' stroke-width='2.65' stroke-linecap='round'/>
+				</svg>
 			</label>
-			<ol>
-				<li>
-					<a href="index.html">About</a>
-				</li>
-				<li>
-					<a href="work.html">Work</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-			</ol>
-		</nav>
+		
+			<div class="nav">
+				<div class="nav-wrapper">
+					<nav>
+						<a href="index.html">About</a>
+						<a href="work.html">Work</a>
+						<a href="#">Contact</a>
+					</nav>
+				</div>
+			</div>
+		</nav>		
 	</header>
+
 	<main>
 		<h1>Design the future today</h1>
 			<p>We move brands to their next chapter</p>
 		<button>Scroll down</button>
 		<section>
-			<video title="A quick rundown of all sorts of applications that we made." src="videos/homepageStart.mp4" poster="images/posterVideoHome.jpg" controls autoplay></video>
+			<video title="A quick rundown of all sorts of applications that we made." poster="images/posterVideoHome.jpg" loop muted playsinline autoplay>
+				<source src="videos/homepageStart.mp4" type="video/mp4">
+				Your browser does not support the video.
+			</video>
 		</section>
 		<section>
 			<article>
-				<video title="The process of a project." src="videos/homepageStrategy.mp4" poster="images/posterStrategy.jpg"></video>
+				<video title="The process of a project." poster="images/posterStrategy.jpg" loop playsinline autoplay>
+					<source src="videos/homepageStrategy.mp4" type="video/mp4">
+				</video>
 				<h3>Strategy</h3>
 				<p>Our process starts with strategic anchoring, grasping clients’ goals, user needs, and evaluating current products and usage data.</p>
 			</article>
 			<article>
-				<video title="Different software on different devices." src="videos/homepageDesign.mp4" poster="images/posterDesign.jpg"></video>
+				<video title="Different software on different devices." poster="images/posterDesign.jpg" loop playsinline autoplay>
+					<source src="videos/homepageDesign.mp4" type="video/mp4">
+				</video>
 				<h3>Design</h3>
 				<p>Through our dedication to design, we focus on scalable systems, testing, prototyping, and building to make visions a reality.</p>
 			</article>
 			<article>
-				<video title="Fonts, colors and icons." src="videos/homepageBrand.mp4" poster="images/posterBrand.jpg"></video>
+				<video title="Fonts, colors and icons." poster="images/posterBrand.jpg" loop playsinline autoplay>
+					<source src="videos/homepageBrand.mp4" type="video/mp4">
+				</video>
 				<h3>Brand</h3>
 				<p>At our studio, branding is a journey that builds lasting relationships and unleashes the full potential of our clients' products.</p>
 			</article>
 			<article>
-				<video title="Different prompts for AI." src="videos/homepageTechnology.mp4" poster="images/posterTechnology.jpg"></video>
+				<video title="Different prompts for AI." poster="images/posterTechnology.jpg" loop playsinline autoplay>
+					<source src="videos/homepageTechnology.mp4" type="video/mp4">
+				</video>
 				<h3>Technology</h3>
 				<p>Embracing the latest innovations, we integrate emerging tech and leverage cutting-edge tools to enhance possibilities.</p>
 			</article>
@@ -203,12 +224,16 @@
 			<p>Our lean team, supported by specialised talent tailored to each project, operates with speed and flexibility.</p>
 			<ol>
 				<li>
-					<video title="Multiple people working in the same digital workspace." src="https://cdn.sanity.io/files/e5uu7aeh/production/d6ac994e2afc01145421ba26e5a280ed2ca0e0c2.mp4" poster="images/weScale.jpg"></video>
+					<video title="Multiple people working in the same digital workspace." poster="images/weScale.jpg" loop muted playsinline autoplay>
+						<source src="https://cdn.sanity.io/files/e5uu7aeh/production/d6ac994e2afc01145421ba26e5a280ed2ca0e0c2.mp4" type="video/mp4">
+					</video>
 					<h3>We scale</h3>
 					<p>We gather requirements to establish the team structure, and collaborate with the client's design team or work independently.</p>
 				</li>
 				<li>
-					<video title="A compass." src="videos/homepageWeExplore.mp4" poster="images/weExplore.jpg"></video>
+					<video title="A compass." poster="images/weExplore.jpg" loop muted playsinline autoplay>
+						<source src="videos/homepageWeExplore.mp4" type="video/mp4">
+					</video>
 					<h3>We explore</h3>
 					<p>We study the product, research data, market trends and user behaviour before exploring options with the client to set goals.</p>
 				</li>
@@ -251,6 +276,7 @@
 			</ol>
 		</section>
 	</main>
+
 	<footer>
 		<section>
 			<h2>Let's work together</h2>
