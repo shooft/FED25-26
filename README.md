@@ -273,6 +273,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://moreair.co/
   2. Wat kan je i.p.v. alt bij een image gebruiken voor bij een video?
   https://discuss.codecademy.com/t/can-we-use-an-alt-attribute-with-the-video-tag/300322/4
-  3. 
+  3. Video automatisch af laten spelen.
+     https://www.w3schools.com/tags/att_video_autoplay.asp
 
 </details>
