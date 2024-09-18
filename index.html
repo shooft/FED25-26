@@ -48,35 +48,35 @@
 			<p>We move brands to their next chapter</p>
 		<button>Scroll down</button>
 		<section>
-			<video title="A quick rundown of all sorts of applications that we made." poster="images/posterVideoHome.jpg" loop muted playsinline autoplay>
+			<video id="firstVideo" title="A quick rundown of all sorts of applications that we made." poster="images/posterVideoHome.jpg" loop muted playsinline autoplay>
 				<source src="videos/homepageStart.mp4" type="video/mp4">
 				Your browser does not support the video.
 			</video>
 		</section>
 		<section>
 			<article>
-				<video title="The process of a project." poster="images/posterStrategy.jpg" loop playsinline autoplay>
+				<video title="The process of a project." poster="images/posterStrategy.jpg" loop playsinline muted loading="lazy">
 					<source src="videos/homepageStrategy.mp4" type="video/mp4">
 				</video>
 				<h3>Strategy</h3>
 				<p>Our process starts with strategic anchoring, grasping clients’ goals, user needs, and evaluating current products and usage data.</p>
 			</article>
 			<article>
-				<video title="Different software on different devices." poster="images/posterDesign.jpg" loop playsinline autoplay>
+				<video title="Different software on different devices." poster="images/posterDesign.jpg" loop playsinline muted loading="lazy">
 					<source src="videos/homepageDesign.mp4" type="video/mp4">
 				</video>
 				<h3>Design</h3>
 				<p>Through our dedication to design, we focus on scalable systems, testing, prototyping, and building to make visions a reality.</p>
 			</article>
 			<article>
-				<video title="Fonts, colors and icons." poster="images/posterBrand.jpg" loop playsinline autoplay>
+				<video title="Fonts, colors and icons." poster="images/posterBrand.jpg" loop playsinline loading="lazy">
 					<source src="videos/homepageBrand.mp4" type="video/mp4">
 				</video>
 				<h3>Brand</h3>
 				<p>At our studio, branding is a journey that builds lasting relationships and unleashes the full potential of our clients' products.</p>
 			</article>
 			<article>
-				<video title="Different prompts for AI." poster="images/posterTechnology.jpg" loop playsinline autoplay>
+				<video title="Different prompts for AI." poster="images/posterTechnology.jpg" loop playsinline loading="lazy">
 					<source src="videos/homepageTechnology.mp4" type="video/mp4">
 				</video>
 				<h3>Technology</h3>
@@ -224,26 +224,30 @@
 			<p>Our lean team, supported by specialised talent tailored to each project, operates with speed and flexibility.</p>
 			<ol>
 				<li>
-					<video title="Multiple people working in the same digital workspace." poster="images/weScale.jpg" loop muted playsinline autoplay>
+					<video title="Multiple people working in the same digital workspace." poster="images/weScale.jpg" loop playsinline loading="lazy">
 						<source src="https://cdn.sanity.io/files/e5uu7aeh/production/d6ac994e2afc01145421ba26e5a280ed2ca0e0c2.mp4" type="video/mp4">
 					</video>
 					<h3>We scale</h3>
 					<p>We gather requirements to establish the team structure, and collaborate with the client's design team or work independently.</p>
 				</li>
 				<li>
-					<video title="A compass." poster="images/weExplore.jpg" loop muted playsinline autoplay>
+					<video title="A compass." poster="images/weExplore.jpg" loop playsinline loading="lazy">
 						<source src="videos/homepageWeExplore.mp4" type="video/mp4">
 					</video>
 					<h3>We explore</h3>
 					<p>We study the product, research data, market trends and user behaviour before exploring options with the client to set goals.</p>
 				</li>
 				<li>
-					<video title="Journey of multiple steps in a process of a project." src="videos/homepageWeExecute.mp4" poster="images/weExecute.jpg"></video>
+					<video title="Journey of multiple steps in a process of a project." poster="images/weExecute.jpg" loop playsinline loading="lazy">
+						<source src="videos/homepageWeExecute.mp4" type="video/mp4">
+					</video>
 					<h3>We execute</h3>
 					<p>We develop a roadmap, define milestones, design, prototype and test before build, with our clients involved at every stage.</p>
 				</li>
 				<li>
-					<video title="Different geometric objects being combined into one." src="videos/homepageWeIterate.mp4" poster="images/weIterate.jpg"></video>
+					<video title="Different geometric objects being combined into one." poster="images/weIterate.jpg" loop playsinline loading="lazy">
+						<source src="videos/homepageWeIterate.mp4" type="video/mp4">
+					</video>
 					<h3>We iterate</h3>
 					<p>We adjust the product based on feedback and usage data to enhance functionality, ensuring continuous improvements.</p>
 				</li>
@@ -291,7 +295,7 @@
 		<a href="#" alt="LinkedIn"><svg width="20px" viewBox="0 0 24 24"><path style="fill:#151614;" d="M21.33,0H2.67C1.19,0,0,1.19,0,2.67v18.67C0,22.81,1.19,24,2.67,24h18.67c1.47,0,2.67-1.19,2.67-2.67 V2.67C24,1.19,22.81,0,21.33,0z M7.26,20.67H3.68V9.11h3.58V20.67z M5.45,7.6c-1.17,0-2.12-0.95-2.12-2.13s0.95-2.13,2.12-2.13 c1.17,0,2.12,0.95,2.12,2.13S6.62,7.6,5.45,7.6z M20.67,20.67h-3.56V14.6c0-1.66-0.63-2.59-1.95-2.59c-1.43,0-2.18,0.97-2.18,2.59 v6.07H9.54V9.11h3.43v1.56c0,0,1.03-1.91,3.48-1.91c2.45,0,4.21,1.5,4.21,4.59V20.67z"></path></svg></a>
 	</footer>
 
-	<script defer src="scripts/script.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 	
 </html>
