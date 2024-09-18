@@ -163,15 +163,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Ik ben aan het begin van de week bezig geweest met het uitvogelen van de navigatie. Deze staat namelijk fixed op de pagina en gezamelijk met de uitklapbare hamburger menu vond ik dit nog best lastig om onder de knie te krijgen. Ik ben eerst begonnen met de basis en dat is de html helemaal goed zetten. Dit heb ik gedeeltelijk overgenomen van de website en waar kon semantischer in mijn html opgenomen.
+  <img src="https://github.com/user-attachments/assets/715c7d9d-0228-4c28-ba81-71e464878aaa" alt="Screenshot of the header with the navigation" width="375px">
+
+  Ik ben heel veel gaan uitproberen met css en er was een punt dat ik mijn eigen code niet meer begreep. Dus ik dacht eraan om secties te maken met alle verschillende onderdelen in css om deze navigatie op orde te krijgen. Toen ik dit had gedaan werkte sommige dingen niet meer dus ben ik onderdeel voor onderdeel langs gegaan om te kijken waar het probleem lag. Blijkbaar zat het probleem bij de styling en heb ik deze uiteindelijk zelf kunnen fixen zonder extra hulp van internet. Hier ben ik persoonlijk heel trots op, maar heeft mij wel de rest van de dag gekost om te fixen.
+  <img src="https://github.com/user-attachments/assets/2051a9dc-013f-4a19-968c-04f95ae25994" alt="Screenshot of the fixed css" width="375px">
+
+  Ik moet wel nog de underline animatie fixen onder het logo, maar dat is volgensmij niet heel moeilijk dus zal ik dit later doen als mijn andere planning ook bijloopt.
+
+  De volgende dag ben ik aan de slag gegaan met de video's die autoplay stonden. Ik kwam er wel achter dat de website er heel langszaam van werd aangezien alle video's op die pagina tegelijkertijd aan het afspelen waren. Daarom vond ik het belangrijk om door middel van javascript een code te schrijven die ervoor zorgt dat wanneer de video's niet in beeld zijn ze ook niet afspelen. Dit heb ik ingesteld voor elke video behalve de eerste video aangezien ik merkte dat hij traag werkte aangezien de hele dom eerst ingeladen wordt voordat de javascript van start gaat.
+  <img src="https://github.com/user-attachments/assets/ae334210-b9d0-4af1-8534-f79b59907799" alt="Screenshot of the javascript" width="375px">
+  <img src="https://github.com/user-attachments/assets/b3b39ba8-4c42-4950-bf8b-8a70c3e61fbe" alt="Screenshot of the javascript" width="375px">
+
+
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  Ik heb gewisseld van groepje zodat ik in de namiddag bij mijn p-uiteiking kan zijn. Daarom wist ik niet wat andere wilde bespreken.
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Kaylee         |
+  | ---            |
+  | dit bespreken  |
+  | en dat ook nog |
+  | ...            |
 
 
   ### Verslag van meeting
