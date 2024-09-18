@@ -180,11 +180,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   Ik heb gewisseld van groepje zodat ik in de namiddag bij mijn p-uiteiking kan zijn. Daarom wist ik niet wat andere wilde bespreken.
 
-  | Kaylee         |
-  | ---            |
-  | dit bespreken  |
-  | en dat ook nog |
-  | ...            |
+  | Kaylee                    |
+  | ---                       |
+  | Hoe gebruik je prettier?  |
+  | ...                       |
+  | ...                       |
 
 
   ### Verslag van meeting
