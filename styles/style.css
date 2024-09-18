@@ -58,9 +58,16 @@ p {
 /* Logo styling */
 /****************/
 #logo {
-    position: relative;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 1001;
     display: inline-block;
-    margin-right: auto;
+}
+
+/* Remove the underline effect from the logo */
+#logo img {
+    display: block;
 }
 
 
