@@ -183,17 +183,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | Kaylee                    |
   | ---                       |
   | Hoe gebruik je prettier?  |
-  | ...                       |
-  | ...                       |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Gebruik geen prettier, maar doe gewoon standaard formatting die in vscode zit.
+  - Maak je css wat compacter door meer variabelen te maken en overbodige classes weg te halen.
+  - Ga met responsiveness meer grid gebruiken (hierbij aangegeven dat dit onderdeel nog wat moeilijk voor mij is aangezien ik meer met flexbox heb gewerkt voorheen).
 
 </details>
 
