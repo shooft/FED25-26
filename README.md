@@ -164,16 +164,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
   Ik ben aan het begin van de week bezig geweest met het uitvogelen van de navigatie. Deze staat namelijk fixed op de pagina en gezamelijk met de uitklapbare hamburger menu vond ik dit nog best lastig om onder de knie te krijgen. Ik ben eerst begonnen met de basis en dat is de html helemaal goed zetten. Dit heb ik gedeeltelijk overgenomen van de website en waar kon semantischer in mijn html opgenomen.
-  <img src="https://github.com/user-attachments/assets/715c7d9d-0228-4c28-ba81-71e464878aaa" alt="Screenshot of the header with the navigation" width="375px">
+  <img src="https://github.com/user-attachments/assets/715c7d9d-0228-4c28-ba81-71e464878aaa" alt="Screenshot van de header van de navigatie" width="375px">
 
   Ik ben heel veel gaan uitproberen met css en er was een punt dat ik mijn eigen code niet meer begreep. Dus ik dacht eraan om secties te maken met alle verschillende onderdelen in css om deze navigatie op orde te krijgen. Toen ik dit had gedaan werkte sommige dingen niet meer dus ben ik onderdeel voor onderdeel langs gegaan om te kijken waar het probleem lag. Blijkbaar zat het probleem bij de styling en heb ik deze uiteindelijk zelf kunnen fixen zonder extra hulp van internet. Hier ben ik persoonlijk heel trots op, maar heeft mij wel de rest van de dag gekost om te fixen.
-  <img src="https://github.com/user-attachments/assets/2051a9dc-013f-4a19-968c-04f95ae25994" alt="Screenshot of the fixed css" width="375px">
+  <img src="https://github.com/user-attachments/assets/2051a9dc-013f-4a19-968c-04f95ae25994" alt="Screenshot van de gefixte css" width="375px">
 
   Ik moet wel nog de underline animatie fixen onder het logo, maar dat is volgensmij niet heel moeilijk dus zal ik dit later doen als mijn andere planning ook bijloopt.
 
   De volgende dag ben ik aan de slag gegaan met de video's die autoplay stonden. Ik kwam er wel achter dat de website er heel langszaam van werd aangezien alle video's op die pagina tegelijkertijd aan het afspelen waren. Daarom vond ik het belangrijk om door middel van javascript een code te schrijven die ervoor zorgt dat wanneer de video's niet in beeld zijn ze ook niet afspelen. Dit heb ik ingesteld voor elke video behalve de eerste video aangezien ik merkte dat hij traag werkte aangezien de hele dom eerst ingeladen wordt voordat de javascript van start gaat.
-  <img src="https://github.com/user-attachments/assets/ae334210-b9d0-4af1-8534-f79b59907799" alt="Screenshot of the javascript" width="375px">
-  <img src="https://github.com/user-attachments/assets/b3b39ba8-4c42-4950-bf8b-8a70c3e61fbe" alt="Screenshot of the javascript" width="375px">
+  <img src="https://github.com/user-attachments/assets/ae334210-b9d0-4af1-8534-f79b59907799" alt="Screenshot van javascript" width="375px">
+  <img src="https://github.com/user-attachments/assets/b3b39ba8-4c42-4950-bf8b-8a70c3e61fbe" alt="Screenshot van javascript" width="375px">
 
 
 
@@ -205,6 +205,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  Ik ben na de feedback even bezig gegaan aan het logo. Zodat deze helemaal klopt voordat ik verder ga met de rest van de website. Zo zag ik dat het logo van kleur veranderd als de achtergrond veranderd. Dit heb ik gedaan door middel van mix-blend-mode en filter: invert(). De informatie die ik hierover nodig had hem ik van mozilla mdn (staat ook in de bronvermelding).
+  <img src="https://github.com/user-attachments/assets/e6598f14-264a-4344-bd8c-848a82d259c0" alt="Screenshot van het werkende logo met zwart wit contrast." width="375px">
+
+  Daarna wilde ik de underline weghalen. Dit heb ik gedaan door middel van wat aanpassingen in mijn css.
+
 
 </details>
 
@@ -285,5 +291,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://discuss.codecademy.com/t/can-we-use-an-alt-attribute-with-the-video-tag/300322/4
   3. Video automatisch af laten spelen.
      https://www.w3schools.com/tags/att_video_autoplay.asp
+  4. Informatie over mix-blend-mode
+     https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode
 
 </details>
