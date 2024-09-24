@@ -1,11 +1,10 @@
-/*********************/
+/*******************/
 /* CUSTOM PROPERTIES */
-/*********************/
+/*******************/
 :root {
   --color-text: rgb(21, 22, 20);
   --color-background: rgb(235, 255, 241);
 }
-
 
 /*********/
 /* FONTS */
@@ -20,8 +19,7 @@
   src: url("/font/PPMori-Light.0f42b11c.woff2");
 }
 
-
-/**************/
+/**************/ 
 /* CSS REMEDY */
 /**************/
 *,
@@ -38,29 +36,27 @@ body {
   padding: 0;
 }
 
-
-/**************/
+/**************/ 
 /* TYPOGRAPHY */
 /**************/
 h1 {
   font-family: "PP-Mori-Light";
-  font-size: 4em;
+  font-size: clamp(2em, 5vw + 1em, 4em); /* Responsive font size */
   text-align: left;
 }
 
 h2, h3, h4, a, li {
   font-family: "PP-Mori-Regular";
-  font-size: 2em;
+  font-size: clamp(1.5em, 3vw + 1em, 2.5em); /* Responsive font size */
   margin-bottom: 0.5em;
 }
 
 p {
   font-family: "PP-Mori-Light";
-  font-size: 1em;
+  font-size: clamp(0.9em, 2vw + 0.5em, 1.2em); /* Responsive font size */
   line-height: 1.6;
   margin-bottom: 1em;
 }
-
 
 /****************/
 /* LOGO STYLING */
@@ -75,7 +71,6 @@ p {
   filter: invert();
   width: 6em;
 }
-
 
 /******************/
 /* HAMBURGER MENU */
@@ -158,7 +153,7 @@ p {
 
 .nav .nav-wrapper nav a {
   color: var(--color-background);
-  font-size: 2.3em;
+  font-size: clamp(1.8em, 3vw + 1em, 2.3em); /* Responsive font size */
   text-decoration: none;
   margin: 15px 0;
   opacity: 0;
@@ -214,7 +209,7 @@ nav a:hover::after {
 /************************/
 main {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Single column by default */
   gap: 2em;
   margin: 0 auto;
   padding: 0 2em;
@@ -225,16 +220,51 @@ main > h1 {
   margin-bottom: 0.5em;
 }
 
-main > h2 {
-  margin-bottom: 1em;
+/* Header container styles */
+.main-header {
+  display: flex; /* Use flex for initial layout */
+  flex-direction: column; /* Stack vertically by default */
 }
 
-main > button {
-  display: block;
-  margin: 1em auto;
+/* Button styles */
+.main-header button {
   padding: 0.75em 2em;
   background-color: var(--color-background);
   border: none;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 64em) { /* 1024px */
+  .main-header {
+    flex-direction: column; /* Change to row for larger screens */
+    align-items: center; /* Align items vertically */
+    gap: 1em; /* Space between button and h2 */
+  }
+
+  /* Ensure button takes up necessary space */
+  .main-header button {
+    margin-right: auto; /* Push button to the left */
+  }
+}
+
+/* Medium screens layout adjustments */
+@media (min-width: 48em) and (max-width: 63.99em) { /* 768px to 1024px */
+  .main-header {
+    flex-direction: column;
+  }
+  .main-header button {
+    margin-right: auto; /* Push button to the left */
+  }
+}
+
+/* Small screens layout adjustments */
+@media (max-width: 47.99em) { /* Below 768px */
+  .main-header {
+    flex-direction: column;
+  }
+  .main-header button {
+    margin-right: auto; /* Push button to the left */
+  }
 }
 
 ol {
@@ -282,66 +312,16 @@ article video {
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: clamp(1.4em, 2.5vw + 0.5em, 1.8em); /* Responsive font size */
   margin-top: 0.75em;
 }
 
 p {
-  font-size: 1em;
+  font-size: clamp(0.9em, 2vw + 0.5em, 1.2em); /* Responsive font size */
   margin-top: 0.5em;
 }
-
 
 /**********************/
 /* RESPONSIVE QUERIES */
 /**********************/
-/* Styles for larger screens - side-by-side layout */
-@media (min-width: 64em) { /* 1024px */
-  section {
-    display: flex;
-    flex-direction: column; /* Keep column layout */
-    gap: 3em; /* Add some spacing between articles */
-  }
-
-  article {
-    flex-direction: row; /* Side by side by default */
-    gap: 2em;
-    align-items: center; /* Align video and text vertically */
-  }
-
-  /* Odd articles - text left, video right */
-  article:nth-child(odd) {
-    flex-direction: row; /* Text first, video second */
-  }
-
-  /* Even articles - video left, text right */
-  article:nth-child(even) {
-    flex-direction: row-reverse; /* Video first, text second */
-  }
-
-  /* Video and text scaling for large screens */
-  article video {
-    width: 50%; /* Video takes 50% of the container */
-    max-width: 600px; /* Limit video size on larger screens */
-  }
-
-  /* Ensure text content takes up space */
-  .text-content {
-    width: 50%; /* Ensure text takes 50% of the container */
-    text-align: left; /* Align text to the left */
-  }
-}
-
-/* Styles for smaller screens - stacked layout */
-@media (max-width: 63.99em) { /* Below 1024px */
-  article {
-    flex-direction: column; /* Stack text and video vertically */
-    gap: 1em;
-    align-items: center; /* Center-align the elements */
-  }
-
-  article video, .text-content {
-    width: 100%; /* Make video and text take full width */
-    text-align: left; /* Text is left-aligned */
-  }
-}
+/* No need for additional queries for font sizes as they are managed with clamp() */
