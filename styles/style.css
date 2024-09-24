@@ -2,24 +2,23 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-    --color-text: rgb(21, 22, 20);
-    --color-background: rgb(235, 255, 241);
-  }
-  
-  @font-face {
-    font-family: "PP-Mori-Light";
-    src: url("/font/PPMori-Light.0f42b11c.woff2");
-  }
-  
-  @font-face {
-    font-family: "PP-Mori-Regular";
-    src: url("/font/PPMori-Regular.b106d8fe.woff2");
-  }
-  
-  @font-face {
-    font-family: "PP-Mori-SemiBold";
-    src: url("/font/PPMori-SemiBold.ab48fc0e.woff2");
-  }
+  --color-text: rgb(21, 22, 20);
+  --color-background: rgb(235, 255, 241);
+}
+
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+  font-family: "PP-Mori-Regular";
+  src: url("/font/PPMori-Regular.b106d8fe.woff2");
+}
+
+@font-face {
+  font-family: "PP-Mori-Light";
+  src: url("/font/PPMori-Light.0f42b11c.woff2");
+}
 
 
 /**************/
@@ -41,25 +40,30 @@ body {
 
 
 /**************/
-/* Main fonts */
+/* TYPOGRAPHY */
 /**************/
 h1 {
-  font-family: "PP-Mori-SemiBold";
+  font-family: "PP-Mori-Light";
+  font-size: 4em;
+  text-align: left;
 }
 
-h2,
-h3,
-h4,
-a {
+h2, h3, h4, a, li {
   font-family: "PP-Mori-Regular";
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
 p {
   font-family: "PP-Mori-Light";
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
 }
 
+
 /****************/
-/* Logo styling */
+/* LOGO STYLING */
 /****************/
 #logo {
   position: fixed;
@@ -69,16 +73,13 @@ p {
   display: inline-block;
   mix-blend-mode: difference;
   filter: invert();
+  width: 6em;
 }
 
-/* Remove the underline effect from the logo */
-#logo img {
-  display: block;
-}
 
-/*********************/
-/* Hamburger styling */
-/*********************/
+/******************/
+/* HAMBURGER MENU */
+/******************/
 .hamburger {
   position: fixed;
   top: 10px;
@@ -92,7 +93,6 @@ p {
   justify-content: center;
 }
 
-/* Style the SVGs inside the hamburger */
 .hamburger svg {
   width: 32px;
   height: 32px;
@@ -102,7 +102,6 @@ p {
   transition: opacity 0.3s ease;
 }
 
-/* Initial state of SVGs */
 .unchecked {
   opacity: 1;
 }
@@ -117,7 +116,7 @@ p {
 }
 
 /***********************/
-/* Hamburger animation */
+/* HAMBURGER ANIMATION */
 /***********************/
 #toggle:checked + .hamburger .unchecked {
   opacity: 0;
@@ -128,7 +127,7 @@ p {
 }
 
 /****************/
-/* Menu styling */
+/* MENU STYLING */
 /****************/
 .nav {
   position: fixed;
@@ -142,9 +141,6 @@ p {
   transition: height 0.3s ease-in-out;
 }
 
-/************************/
-/* Menu Content Styling */
-/************************/
 .nav .nav-wrapper {
   display: flex;
   flex-direction: column;
@@ -154,7 +150,6 @@ p {
   padding-left: 20px;
 }
 
-/* Ensure links are in a column */
 .nav .nav-wrapper nav {
   display: flex;
   flex-direction: column;
@@ -179,9 +174,9 @@ p {
   opacity: 0.9;
 }
 
-/***********************************************/
-/* Hover-effect with white line under the link */
-/***********************************************/
+/*******************************************/
+/* HOVER EFFECT WITH WHITE LINE UNDER LINK */
+/*******************************************/
 nav a {
   position: relative;
   display: inline-block;
@@ -206,7 +201,7 @@ nav a:hover::after {
 }
 
 /*******************/
-/* Menu Open State */
+/* MENU OPEN STATE */
 /*******************/
 #toggle:checked + .hamburger + .nav .nav-wrapper nav a {
   opacity: 0.9;
@@ -214,12 +209,174 @@ nav a:hover::after {
   transition-delay: 0.2s;
 }
 
-/**********/
-/* Videos */
-/**********/
+/************************/
+/* MAIN CONTENT STYLING */
+/************************/
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+main > h1 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+main > h2 {
+  margin-bottom: 1em;
+}
+
+main > button {
+  display: block;
+  margin: 1em auto;
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  background-color: var(--color-background);
+  border: none;
+  cursor: pointer;
+}
+
+ol {
+  list-style-type: none;
+}
+
+/*****************/
+/* VIDEO STYLING */
+/*****************/
 video {
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
+  margin: 2em 0;
+}
+
+#firstVideo {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/***************/
+/* GRID LAYOUT */
+/***************/
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 2em;
+  padding: 2em 0;
+}
+
+article {
+  background-color: var(--color-background);
+}
+
+article video {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-top: 0.75em;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+/******************/
+/* BUTTON STYLING */
+/******************/
+button {
+  display: block;
+  margin: 2em auto;
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  background-color: var(--color-text);
+  color: var(--color-background);
+  border: none;
+  cursor: pointer;
+}
+
+/**********************/
+/* RESPONSIVE QUERIES */
+/**********************/
+@media (min-width: 48em) { /* 768px */
+  main > h1 {
+      font-size: 5em;
+  }
+
+  main > h2 {
+      font-size: 2.5em;
+  }
+
+  section {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      padding: 0 2em; /* Add padding to prevent text from hitting the edges */
+      overflow: hidden; /* Prevent overflow */
+  }
+
+  section > article {
+      display: block; /* Ensure articles stack */
+      width: 100%; /* Ensure articles take full width */
+      max-width: 100%; /* Prevent articles from overflowing */
+  }
+
+  ol {
+      display: block; /* Ensure ordered lists also stack */
+  }
+
+  /* Prevent videos from scaling */
+  video {
+      width: 100%;  /* Make video responsive */
+      height: auto; /* Maintain original height proportional to width */
+      max-width: 100%; /* Ensure it doesn't overflow the container */
+      max-height: none; /* No max-height restriction */
+      margin: 0 auto; /* Center the video */
+  }
+}
+
+@media (min-width: 64em) { /* 1024px */
+  main > h1 {
+      font-size: 6em;
+  }
+
+  main > h2 {
+      font-size: 3em;
+  }
+
+  section {
+      display: flex;
+      flex-direction: column;
+      padding: 0 2em; /* Add padding to prevent text from hitting the edges */
+  }
+}
+
+@media (min-width: 90em) { /* 1440px */
+  main > h1 {
+      font-size: 7em;
+  }
+
+  section {
+      display: flex;
+      flex-direction: column;
+      gap: 4em;
+      padding: 0 2em; /* Add padding to prevent text from hitting the edges */
+  }
+
+  h3 {
+      font-size: 2em;
+  }
+
+  p {
+      font-size: 1.2em;
+  }
 }
