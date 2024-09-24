@@ -50,4 +50,42 @@ document.addEventListener('DOMContentLoaded', () => {
     videos.forEach(video => {
       observer.observe(video);
     });
-  });  
+  });
+
+  // Carousel
+  const carouselWrapper = document.querySelector('.carousel-wrapper');
+  const carouselList = document.querySelector('.carousel-list');
+  const items = document.querySelectorAll('.carousel-list li');
+  const leftNav = document.querySelector('.carousel-nav.left');
+  const rightNav = document.querySelector('.carousel-nav.right');
+  
+  let currentIndex = 0;
+  
+  // Function to update the carousel position
+  function updateCarousel() {
+      const itemWidth = carouselWrapper.offsetWidth; // Get the width of the carousel wrapper
+      const offset = -currentIndex * itemWidth; // Calculate the offset based on current index
+      carouselList.style.transform = `translateX(${offset}px)`; // Apply the calculated offset
+  }
+  
+  // Event listener for left navigation button click
+  leftNav.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex--; // Move to the previous item
+          updateCarousel();
+      }
+  });
+  
+  // Event listener for right navigation button click
+  rightNav.addEventListener('click', () => {
+      if (currentIndex < items.length - 1) {
+          currentIndex++; // Move to the next item
+          updateCarousel();
+      }
+  });
+  
+  // Initialize carousel position on load
+  updateCarousel();
+  
+  // Optionally add event listener for window resize
+  window.addEventListener('resize', updateCarousel);  

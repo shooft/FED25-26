@@ -462,8 +462,102 @@ p {
   }
 }
 
-/* Styles for smaller screens (default behavior) */
-.industries-list li {
-  text-align: left;               /* Left align text for smaller screens */
-  margin: 5px 0;                 /* Add vertical margin between items */
+/*******************/
+/* BRANDS SECTION STYLING */
+/*******************/
+.brands {
+  padding: 2em 0;                /* Padding around the brands section */
+}
+
+.brands-logos {
+  display: grid;                 /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 20px;                     /* Space between items */
+}
+
+.brands-logos img {
+  width: 100%;                   /* Make images responsive */
+  height: auto;                  /* Maintain aspect ratio */
+  display: block;                /* Ensure no extra space below images */
+}
+
+/************/
+/* Carousel */
+/************/
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden; /* Hide overflow to ensure no content spills out */
+  width: 100%; /* Full width for responsiveness */
+  max-width: 800px; /* Optional max width */
+  margin: auto; /* Center the carousel */
+}
+
+.carousel-list {
+  display: flex; /* Flexbox for horizontal layout */
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.carousel-list ul {
+  display: flex; /* Flex layout for list */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove list bullets */
+  width: 100%; /* Ensure ul takes full width */
+}
+
+.carousel-list li {
+  min-width: 100%; /* Each item takes full width of the carousel view */
+  max-width: 100%; /* Ensures the item doesn't exceed carousel width */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  padding: 2em; /* Padding for inside each item */
+  overflow: hidden; /* Hide overflow */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
+  background-color: #fff; /* Background color for a card effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to create card effect */
+  border-radius: 8px; /* Rounded corners */
+  margin: 0; /* Remove margin to avoid additional spacing */
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 2em; /* Size of navigation */
+  color: var(--color-text); /* Desired color */
+  padding: 0 1em; /* Padding around buttons */
+  z-index: 100; /* Ensure nav buttons are above the content */
+}
+
+.carousel-nav.left {
+  left: 0; /* Position left button */
+}
+
+.carousel-nav.right {
+  right: 0; /* Position right button */
+}
+
+.carousel-list p {
+  font-size: 1em; /* Adjust font size for readability */
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Ensure long words wrap properly */
+  margin: 0.5em 0; /* Add margins for spacing */
+  max-width: 100%; /* Ensure p doesn't exceed the card width */
+  overflow-wrap: break-word; /* Break long words */
+  box-sizing: border-box; /* Include padding in width */
+  text-align: left; /* Ensure text aligns to the left */
+}
+
+.carousel-list h3 {
+  font-size: 1em; /* Header size */
+  margin: 0.5em 0; /* Add margins */
+}
+
+.carousel-list h4 {
+  font-size: 0.8em; /* Adjust subtitle size */
+  font-weight: normal; /* Optional: change font weight */
+  margin: 0.3em 0; /* Add margin */
 }
