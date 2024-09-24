@@ -433,3 +433,37 @@ p {
       display: flex; /* Ensure flex display for vertical alignment */
   }
 }
+
+/*******************/
+/* LIST STYLING */
+/*******************/
+.industries-list {
+  padding: 0;                   /* Remove default padding */
+  list-style-type: none;        /* Remove default list styling */
+}
+
+/* Flexbox styles for larger screens */
+@media (min-width: 64em) { /* Adjust this value if needed for your break point */
+  .industries-list {
+      display: flex;                 /* Use flexbox for the list */
+      justify-content: space-between; /* Evenly space the items */
+      width: 100%;                  /* Ensure the list takes the full width */
+  }
+
+  .industries-list li {
+      text-align: center;           /* Center align the text in each item */
+      flex: 1;                      /* Allow items to grow equally */
+      margin: 0;                    /* Remove horizontal margin to avoid overflow */
+  }
+
+  /* Optional: To add a bit of space between the items */
+  .industries-list li:not(:last-child) {
+      margin-right: 6em;           /* Add space between items */
+  }
+}
+
+/* Styles for smaller screens (default behavior) */
+.industries-list li {
+  text-align: left;               /* Left align text for smaller screens */
+  margin: 5px 0;                 /* Add vertical margin between items */
+}
