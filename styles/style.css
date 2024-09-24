@@ -233,10 +233,8 @@ main > button {
   display: block;
   margin: 1em auto;
   padding: 0.75em 2em;
-  font-size: 1.2em;
   background-color: var(--color-background);
   border: none;
-  cursor: pointer;
 }
 
 ol {
@@ -272,6 +270,9 @@ section {
 
 article {
   background-color: var(--color-background);
+  display: flex;
+  flex-direction: column; /* Stack items by default on smaller screens */
+  gap: 1em;
 }
 
 article video {
@@ -290,93 +291,57 @@ p {
   margin-top: 0.5em;
 }
 
-/******************/
-/* BUTTON STYLING */
-/******************/
-button {
-  display: block;
-  margin: 2em auto;
-  padding: 0.75em 2em;
-  font-size: 1.2em;
-  background-color: var(--color-text);
-  color: var(--color-background);
-  border: none;
-  cursor: pointer;
-}
 
 /**********************/
 /* RESPONSIVE QUERIES */
 /**********************/
-@media (min-width: 48em) { /* 768px */
-  main > h1 {
-      font-size: 5em;
-  }
-
-  main > h2 {
-      font-size: 2.5em;
-  }
-
-  section {
-      display: flex;
-      flex-direction: column;
-      gap: 3em;
-      padding: 0 2em; /* Add padding to prevent text from hitting the edges */
-      overflow: hidden; /* Prevent overflow */
-  }
-
-  section > article {
-      display: block; /* Ensure articles stack */
-      width: 100%; /* Ensure articles take full width */
-      max-width: 100%; /* Prevent articles from overflowing */
-  }
-
-  ol {
-      display: block; /* Ensure ordered lists also stack */
-  }
-
-  /* Prevent videos from scaling */
-  video {
-      width: 100%;  /* Make video responsive */
-      height: auto; /* Maintain original height proportional to width */
-      max-width: 100%; /* Ensure it doesn't overflow the container */
-      max-height: none; /* No max-height restriction */
-      margin: 0 auto; /* Center the video */
-  }
-}
-
+/* Styles for larger screens - side-by-side layout */
 @media (min-width: 64em) { /* 1024px */
-  main > h1 {
-      font-size: 6em;
-  }
-
-  main > h2 {
-      font-size: 3em;
-  }
-
   section {
-      display: flex;
-      flex-direction: column;
-      padding: 0 2em; /* Add padding to prevent text from hitting the edges */
+    display: flex;
+    flex-direction: column; /* Keep column layout */
+    gap: 3em; /* Add some spacing between articles */
+  }
+
+  article {
+    flex-direction: row; /* Side by side by default */
+    gap: 2em;
+    align-items: center; /* Align video and text vertically */
+  }
+
+  /* Odd articles - text left, video right */
+  article:nth-child(odd) {
+    flex-direction: row; /* Text first, video second */
+  }
+
+  /* Even articles - video left, text right */
+  article:nth-child(even) {
+    flex-direction: row-reverse; /* Video first, text second */
+  }
+
+  /* Video and text scaling for large screens */
+  article video {
+    width: 50%; /* Video takes 50% of the container */
+    max-width: 600px; /* Limit video size on larger screens */
+  }
+
+  /* Ensure text content takes up space */
+  .text-content {
+    width: 50%; /* Ensure text takes 50% of the container */
+    text-align: left; /* Align text to the left */
   }
 }
 
-@media (min-width: 90em) { /* 1440px */
-  main > h1 {
-      font-size: 7em;
+/* Styles for smaller screens - stacked layout */
+@media (max-width: 63.99em) { /* Below 1024px */
+  article {
+    flex-direction: column; /* Stack text and video vertically */
+    gap: 1em;
+    align-items: center; /* Center-align the elements */
   }
 
-  section {
-      display: flex;
-      flex-direction: column;
-      gap: 4em;
-      padding: 0 2em; /* Add padding to prevent text from hitting the edges */
-  }
-
-  h3 {
-      font-size: 2em;
-  }
-
-  p {
-      font-size: 1.2em;
+  article video, .text-content {
+    width: 100%; /* Make video and text take full width */
+    text-align: left; /* Text is left-aligned */
   }
 }
