@@ -226,15 +226,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  consistent scaling using clamp: 
+  Making semantischer:
+  Making carousel pretty on bigger screen:
+  making the awards card scale and have text left and pictures right:
+
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Kaylee         |
+  | ---            |
+  | dit bespreken  |
+  | en dat ook nog |
+  | ...            |
 
 
   ### Verslag van meeting
