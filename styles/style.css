@@ -561,3 +561,55 @@ p {
   font-weight: normal; /* Optional: change font weight */
   margin: 0.3em 0; /* Add margin */
 }
+
+.awards-section {
+  display: flex; /* Center the card horizontally */
+  justify-content: center; /* Center the content */
+  padding: 20px; /* Padding around the section */
+}
+
+.awards-card {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border-radius: 2em; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  max-width: 800px; /* Max width for larger screens */
+  width: 100%; /* Full width on smaller screens */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack header and paragraph vertically by default */
+  gap: 20px; /* Space between text and images */
+}
+
+.awards-text {
+  text-align: left; /* Left-align the text */
+}
+
+.awards-images {
+  display: grid; /* Grid layout for images */
+  grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  gap: 10px; /* Space between images */
+}
+
+.awards-images img {
+  width: 100%; /* Responsive images */
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Responsive behavior for larger screens */
+@media (min-width: 64em) {
+  .awards-card {
+      flex-direction: row; /* Align text and images horizontally */
+      align-items: flex-start; /* Align items to the top */
+  }
+
+  .awards-text {
+      flex: 1; /* Allow text to take available space */
+      margin-right: 20px; /* Space between text and images */
+  }
+
+  .awards-images {
+      flex: 1; /* Allow images to take available space */
+      display: grid; /* Keep the grid layout for images */
+      grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns for images */
+  }
+}
