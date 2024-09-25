@@ -51,7 +51,7 @@ h2, h3, h4, a, li {
   margin-bottom: 0.5em;
 }
 
-p {
+p, button {
   font-family: "PP-Mori-Light";
   font-size: clamp(0.9em, 2vw + 0.5em, 1.2em); /* Responsive font size */
   line-height: 1.6;
@@ -227,7 +227,8 @@ main > h1 {
 }
 
 /* Button styles */
-.main-header button {
+.main-header button,
+footer > button {
   padding: 0.75em 2em;
   background-color: var(--color-background);
   border: none;
@@ -562,6 +563,9 @@ p {
   margin: 0.3em 0; /* Add margin */
 }
 
+/********/
+/*Awards*/
+/********/
 .awards-section {
   display: flex; /* Center the card horizontally */
   justify-content: center; /* Center the content */
@@ -612,4 +616,207 @@ p {
       display: grid; /* Keep the grid layout for images */
       grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns for images */
   }
+}
+
+/*************/
+/*Recent work*/
+/*************/
+/* Style the ordered list */
+ol {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+  margin: 0;
+  display: grid; /* Use grid for the layout */
+  grid-template-columns: 1fr; /* On small screens, stack items vertically */
+  gap: 2em; /* Add some spacing between the list items */
+  box-sizing: border-box;
+}
+
+/* Style the list items */
+ol li {
+  display: block;
+}
+
+/* Media query for larger screens (bigger than 64em) */
+@media (min-width: 64em) {
+  ol {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on larger screens */
+  }
+}
+
+/* General styles for images and text */
+ol li img {
+  width: 100%; /* Make the image take up the full width of the list item */
+  height: auto;
+}
+
+ol li h3 {
+  margin: 1em 0 0.5em;
+  font-size: 1.5em;
+}
+
+ol li p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Parent container */
+.containerButton {
+  display: grid;
+  place-items: center; /* Center the button horizontally */
+  width: 100vw; /* Full width of the viewport */
+  box-sizing: border-box;
+  padding: 1em; /* Prevent button from touching the edges */
+}
+
+/* Button styling */
+#viewButton, #sayButton {
+  height: 4.24em;
+  line-height: calc(4.25em - 4px + 0.125em);
+  border-radius: 2.125em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  font-weight: 400;
+  display: flex; /* Use flexbox to align text and svg */
+  align-items: center; /* Vertically center the text and SVG */
+  justify-content: center; /* Center content horizontally */
+  gap: 0.5em; /* Add some space between the text and SVG */
+  box-sizing: border-box;
+  border: 2px solid var(--color-text);
+  background-color: var(--color-text);
+  color: var(--color-background);
+  cursor: pointer;
+  width: auto;
+  max-width: 100%; /* Prevents button from exceeding container width */
+  overflow: hidden; /* Ensures content doesn’t overflow */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+/* Ensure the button text doesn't break into a new line */
+#viewButton span {
+  white-space: nowrap; /* Keep text and svg on the same line */
+  margin-left: 0.5em; /* Space between text and the SVG */
+}
+
+/*************/
+/*How we work*/
+/*************/
+/* Reset default styles for ordered list */
+.stacked-items {
+  list-style: none; /* Remove default list numbering */
+  padding: 0;
+  margin: 0;
+}
+
+/* Default styles for list items */
+.stacked-items li {
+  display: block; /* Block display for stacking */
+  margin-bottom: 2em; /* Space between items */
+}
+
+/* Ensure video takes full width of its container */
+.stacked-items li video {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Block display for proper sizing */
+}
+
+/* Heading and paragraph styling */
+.stacked-items li h3 {
+  margin-top: 1em; /* Space above heading */
+  font-size: 1.5em; /* Adjust heading size */
+}
+
+.stacked-items li p {
+  margin: 0.5em 0 0; /* Adjust margins */
+  font-size: 1em; /* Normal text size */
+}
+
+/* Media query for larger screens (64em and above) */
+@media (min-width: 64em) {
+  .stacked-items {
+    display: grid; /* Change to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 2em; /* Space between grid items */
+  }
+
+  .stacked-items li {
+    margin-bottom: 0; /* Remove bottom margin for grid layout */
+  }
+}
+
+/**********/
+/*LinkedIn*/
+/**********/
+/* Base styles for the section */
+section {
+  padding: 2em 0;
+}
+
+/* Styles for the ordered list */
+.team-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: grid; /* Use grid for layout */
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 2em; /* Space between items */
+}
+
+/* Styles for the list items */
+.team-list li {
+  background-color: var(--color-background); /* Adjust background color if needed */
+  padding: 1em; /* Padding inside each list item */
+  border-radius: 8px; /* Rounded corners for items */
+  display: flex; /* Use flex to align items vertically */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Style for images or GIFs */
+.team-list li img {
+  max-height: 5em; /* Maximum height of the image */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits well */
+  margin-bottom: 0.5em; /* Space below the image */
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 64em) { /* 1024px */
+  .team-list {
+      grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+  }
+}
+
+/* Footer */
+.footer {
+  display: grid; /* Use grid for layout */
+  grid-template-columns: 1fr auto; /* Left column for copyright, right for social media */
+  align-items: end; /* Align items to the bottom of the grid */
+  padding: 1em; /* Padding for spacing */
+  max-width: 100%; /* Full width */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+}
+
+/* Social media links */
+.social-media {
+  display: flex; /* Flexbox for social media icons */
+  gap: 1em; /* Space between social media icons */
+  justify-self: end; /* Align social media links to the right */
+}
+
+/* Ensure each SVG link has a max height of 1em */
+.social-media a {
+  display: flex; /* Ensure the anchor is a flex container */
+  align-items: center; /* Center the SVG vertically */
+}
+
+.social-media svg {
+  height: 1em; /* Maximum height of the SVG */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits well */
 }
