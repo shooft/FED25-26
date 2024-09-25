@@ -100,7 +100,6 @@ h4, p, button {
   fill: none;
   stroke: var(--color-text);
   position: absolute;
-  transition: opacity 0.3s ease;
 }
 
 .unchecked {
@@ -135,44 +134,35 @@ h4, p, button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 0;
+  height: 0; /* Set back to 0 for animation */
   background-color: var(--color-text);
   overflow: hidden;
   z-index: 999;
   transition: height 0.3s ease-in-out;
+  display: grid; /* Use grid for layout */
+  grid-template-rows: repeat(3, auto); /* Allow three rows for links */
+  place-items: left; /* Center items horizontally */
 }
 
-.nav .nav-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-  padding-left: 20px;
+.nav li {
+  list-style: none; /* Remove list bullet */
 }
 
-.nav .nav-wrapper nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.nav .nav-wrapper nav a {
+.nav a {
+  top: 1em;
   color: var(--color-background);
   font-size: clamp(1.8em, 3vw + 1em, 2.3em);
-  text-decoration: none;
-  margin: 15px 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  text-decoration: none; /* Ensure no underline */
+  opacity: 0; /* Start hidden for animation */
 }
 
 /* Show menu items on toggle */
 #toggle:checked + .hamburger + .nav {
-  height: 100%;
+  height: 100%; /* Expand the menu */
 }
 
-#toggle:checked + .hamburger + .nav .nav-wrapper nav a {
-  opacity: 0.9;
+#toggle:checked + .hamburger + .nav a {
+  opacity: 0.9; /* Fade in items */
 }
 
 /*******************************************/
@@ -181,9 +171,6 @@ h4, p, button {
 nav a {
   position: relative;
   display: inline-block;
-  color: var(--color-background);
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 nav a::after {
@@ -194,7 +181,6 @@ nav a::after {
   background-color: var(--color-background);
   bottom: 0;
   left: 0;
-  transition: width 0.4s ease;
 }
 
 nav a:hover::after {
@@ -227,10 +213,12 @@ main > h1 {
 }
 
 .main-header button,
-footer > button {
+footer button {
   padding: 0.75em 2em;
   background-color: var(--color-background);
   border: none;
+  display: grid;
+  place-items: left;
 }
 
 /* Responsive layout */
@@ -358,26 +346,25 @@ article {
 .industries-list {
   padding: 0;
   list-style-type: none;
+  text-align: center;
 }
 
-/* Flexbox styles for larger screens */
+/* Grid styles for larger screens */
 @media (min-width: 64em) {
+  .industries-a {
+    display: flex;
+  }
+
   .industries-list {
     display: flex;
-    justify-content: space-between;
     width: 100%;
   }
 
   .industries-list li {
-    text-align: center;
-    flex: 1;
-    margin: 0;
-  }
-
-  .industries-list li:not(:last-child) {
-    margin-right: 6em;
+    text-align: center; /* Center text within each grid item */
   }
 }
+
 
 /*******************/
 /* BRANDS SECTION STYLING */
@@ -750,8 +737,9 @@ img {
   width: 100%; /* Make images responsive */
 }
 
-img:not(:first-child) {
-  border-radius: 1em; /* Rounded corners */
+img:not(:first-child),
+video:not(:first-child) {
+  border-radius: 1em;
 }
 
 .cobot-section {
@@ -777,7 +765,7 @@ img:not(:first-child) {
 .media-container img,
 .media-container video {
   display: block; /* Ensure proper sizing */
-  border-radius: 8px; /* Optional: Rounded corners */
+  border-radius: 1em; /* Optional: Rounded corners */
 }
 
 /* Media query for screens larger than 64em */
