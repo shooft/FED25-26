@@ -214,6 +214,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - De navigatie benoemd hij wel, maar zie je niet terug op het scherm. Dit is voor blinden niet erg, maar iets om wel te noteren.
   - De down en up button om door de pagina heen te scrollen worden aangegeven als buttons, maar legt niks uit over de butten. Dit zal ik er nog bij gaan zetten zodat het voor de screenreader nog duidelijker is. Echter is dit voor een screenreader niet fijn om ook daadwerkelijk te gebruiken, omdat je dan het overzicht op de pagina kan kwijtraken.
   - Bij het gedeelte met "industries" is vrij irritant. Je kan namelijk niet in een geheel voorbij de list items. En omdat je dit niet kan skippen moet je de down arrow spammen om verder te kunnen komen. Hier moet ik nog wel even naar kijken.
+  - Bij het einde van de pagina heb je de links naar de sociale media. Echter benoemd hij het wel als link, maar ook daar ben ik de alt tekst vergeten. Dit zal ik toevoegen zodat het duidelijker zal zijn voor de gebruiker.
 
 
 </details>
