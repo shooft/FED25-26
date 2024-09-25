@@ -203,13 +203,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
+  Ik heb een test gedaan op 25-09-2024. Dit heb ik gedaan voor de homepagina. De workpagina was namelijk nog niet af. Wel weet ik dat als de homepagina goed functioneert volgens de screenreader zal de workpagina ook goed werken aangezien ik deze op dezelfde manier zal coderen.
+
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
-  Ik ben na de feedback even bezig gegaan aan het logo. Zodat deze helemaal klopt voordat ik verder ga met de rest van de website. Zo zag ik dat het logo van kleur veranderd als de achtergrond veranderd. Dit heb ik gedaan door middel van mix-blend-mode en filter: invert(). De informatie die ik hierover nodig had hem ik van mozilla mdn (staat ook in de bronvermelding).
-  <img src="https://github.com/user-attachments/assets/e6598f14-264a-4344-bd8c-848a82d259c0" alt="Screenshot van het werkende logo met zwart wit contrast." width="375px">
-
-  Daarna wilde ik de underline weghalen. Dit heb ik gedaan door middel van wat aanpassingen in mijn css.
+  - Ik zag dat bij het navigeren de navigatie die boven vast staat best irritant kan zijn als je terug omhoog wil in de pagina. Dit komt omdat de screenreader vast loopt op de vaste navigatie en daardoor niet verder omhoog kan in de pagina. Echter ga ik niks in mijn code hiervoor veranderen aangezien dit op de normale website ook zo is en daarnaast kan het ook als handig worden ervaren aangezien je wel makkelijk bij de navigatie kan komen om naar een andere pagina te kunnen gaan.
+  - Ook heb ik ondervonden dat als je over de afbeeldingen gaat dat je een precieze uitleg krijgt van de afbeelding door middel van de alt tekst. Dit werkt soepel en fijn om doorheen te scrollen met de screenreader.
+  - De screenreader skipt wel alle video's. Ik weet niet of dit ligt aan dat ik het skip met de screenreader of dat dit serieus door normale gebruikers ook geskipt wordt. Echter wordt er met de video niet verder verduidelijkt wat de tekst en afbeeldingen al vertellen. Dit betekend dat het niet mijn eerste prioriteit heeft om aan te passen als ik tijd over heb.
+  - De navigatie benoemd hij wel, maar zie je niet terug op het scherm. Dit is voor blinden niet erg, maar iets om wel te noteren.
+  - De down en up button om door de pagina heen te scrollen worden aangegeven als buttons, maar legt niks uit over de butten. Dit zal ik er nog bij gaan zetten zodat het voor de screenreader nog duidelijker is. Echter is dit voor een screenreader niet fijn om ook daadwerkelijk te gebruiken, omdat je dan het overzicht op de pagina kan kwijtraken.
+  - Bij het gedeelte met "industries" is vrij irritant. Je kan namelijk niet in een geheel voorbij de list items. En omdat je dit niet kan skippen moet je de down arrow spammen om verder te kunnen komen. Hier moet ik nog wel even naar kijken.
 
 
 </details>
@@ -225,6 +229,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+  Ik ben na de feedback even bezig gegaan aan het logo. Zodat deze helemaal klopt voordat ik verder ga met de rest van de website. Zo zag ik dat het logo van kleur veranderd als de achtergrond veranderd. Dit heb ik gedaan door middel van mix-blend-mode en filter: invert(). De informatie die ik hierover nodig had hem ik van mozilla mdn (staat ook in de bronvermelding).
+  <img src="https://github.com/user-attachments/assets/e6598f14-264a-4344-bd8c-848a82d259c0" alt="Screenshot van het werkende logo met zwart wit contrast." width="375px">
+
+  Daarna wilde ik de underline weghalen. Dit heb ik gedaan door middel van wat aanpassingen in mijn css.
 
   consistent scaling using clamp: 
   Making semantischer:
