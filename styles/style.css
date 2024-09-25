@@ -212,7 +212,6 @@ main > h1 {
 
 .main-header button,
 footer button {
-  padding: 0.75em 2em;
   background-color: var(--color-background);
   border: none;
   display: grid;
@@ -222,19 +221,12 @@ footer button:not(:first-child) {
   transform: rotate(180deg);
 }
 
-/* Responsive layout */
-@media (min-width: 48em) {
-  /* Medium screens and up */
-  .main-header button {
-    margin-right: auto;
-  }
-}
-
 @media (min-width: 64em) {
   /* Large screens */
   .main-header {
+    margin-right: auto;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 1em;
   }
 }
@@ -692,6 +684,7 @@ section {
   display: flex; /* Flexbox for social media icons */
   gap: 1em; /* Space between social media icons */
   justify-self: end; /* Align social media links to the right */
+  list-style-type: none;
 }
 
 /* Ensure each SVG link has a max height of 1em */
@@ -701,7 +694,7 @@ section {
 }
 
 .social-media svg {
-  height: 1em; /* Maximum height of the SVG */
+  height: 0.5em; /* Maximum height of the SVG */
   width: auto; /* Maintain aspect ratio */
   object-fit: contain; /* Ensure the image fits well */
 }
@@ -773,3 +766,5 @@ video:not(:first-child) {
 .quote > p {
   max-width: 50%; /* Limit the width of the paragraph */
 }
+
+/*********************************************************** @Media / Responsive */
