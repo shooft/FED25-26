@@ -11,12 +11,12 @@
 /*********/
 @font-face {
   font-family: "PP-Mori-Regular";
-  src: url("/font/PPMori-Regular.b106d8fe.woff2");
+  src: url("/font/PPMori-Regular.b106d8fe.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "PP-Mori-Light";
-  src: url("/font/PPMori-Light.0f42b11c.woff2");
+  src: url("/font/PPMori-Light.0f42b11c.woff2") format("woff2");
 }
 
 /**************/ 
@@ -789,7 +789,9 @@ section {
   }
 }
 
+/**********/
 /* Footer */
+/**********/
 .footer {
   display: grid; /* Use grid for layout */
   grid-template-columns: 1fr auto; /* Left column for copyright, right for social media */
@@ -819,4 +821,10 @@ section {
   height: 1em; /* Maximum height of the SVG */
   width: auto; /* Maintain aspect ratio */
   object-fit: contain; /* Ensure the image fits well */
+}
+
+#letsWork {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
 }
