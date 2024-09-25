@@ -30,7 +30,7 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   background: var(--color-background);
   overflow-x: hidden;
   padding: 0;
@@ -507,19 +507,17 @@ p {
 }
 
 .carousel-list li {
-  min-width: 100%; /* Each item takes full width of the carousel view */
-  max-width: 100%; /* Ensures the item doesn't exceed carousel width */
+  flex: 0 0 100%; /* Each item takes full width of the carousel view by default */
   box-sizing: border-box; /* Include padding in the width calculation */
-  padding: 2em; /* Padding for inside each item */
+  padding: 2em; /* Adjust padding for inside each item */
   overflow: hidden; /* Hide overflow */
   display: flex;
   flex-direction: column; /* Stack content vertically */
   justify-content: flex-start; /* Align content to the top */
   align-items: flex-start; /* Align content to the left */
-  background-color: #fff; /* Background color for a card effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to create card effect */
-  border-radius: 8px; /* Rounded corners */
+  background-color: var(--color-background); /* Background color for a card effect */
   margin: 0; /* Remove margin to avoid additional spacing */
+  max-width: 100%; /* Ensure item doesn't exceed carousel width */
 }
 
 .carousel-nav {
@@ -548,7 +546,6 @@ p {
   margin: 0.5em 0; /* Add margins for spacing */
   max-width: 100%; /* Ensure p doesn't exceed the card width */
   overflow-wrap: break-word; /* Break long words */
-  box-sizing: border-box; /* Include padding in width */
   text-align: left; /* Ensure text aligns to the left */
 }
 
@@ -563,25 +560,39 @@ p {
   margin: 0.3em 0; /* Add margin */
 }
 
+/* Additional Media Query for Larger Screens */
+@media (min-width: 64em) {
+  .carousel-list li {
+    flex: 0 0 20%; /* Set a specific width for each carousel item */
+    margin: 0 1.5%; /* Add margin to space out cards */
+  }
+
+  .carousel-list p {
+    max-width: 90%; /* Restrict the text width to prevent overflow */
+  }
+}
+
 /********/
-/*Awards*/
+/* Awards */
 /********/
 .awards-section {
-  display: flex; /* Center the card horizontally */
-  justify-content: center; /* Center the content */
+  display: grid; /* Use grid layout for the section */
+  grid-template-columns: 1fr; /* One column by default */
+  justify-items: center; /* Center the content horizontally */
   padding: 20px; /* Padding around the section */
 }
 
 .awards-card {
-  background-color: black; /* Black background */
-  color: white; /* White text */
+  background-color: var(--color-text); /* Black background */
+  color: var(--color-background); /* White text */
   border-radius: 2em; /* Rounded corners */
   padding: 20px; /* Inner padding */
-  max-width: 800px; /* Max width for larger screens */
+  max-width: 1000px; /* Max width for larger screens */
   width: 100%; /* Full width on smaller screens */
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack header and paragraph vertically by default */
+  display: grid; /* Use grid layout for the card */
+  grid-template-columns: 1fr; /* Stack header and paragraph vertically by default */
   gap: 20px; /* Space between text and images */
+  box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
 }
 
 .awards-text {
@@ -602,19 +613,26 @@ p {
 /* Responsive behavior for larger screens */
 @media (min-width: 64em) {
   .awards-card {
-      flex-direction: row; /* Align text and images horizontally */
-      align-items: flex-start; /* Align items to the top */
+    grid-template-columns: 2fr 1fr; /* 2 parts for text and 1 for images */
+    align-items: flex-start; /* Align items to the top */
   }
 
   .awards-text {
-      flex: 1; /* Allow text to take available space */
-      margin-right: 20px; /* Space between text and images */
+    margin-right: 20px; /* Space between text and images */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
   }
 
   .awards-images {
-      flex: 1; /* Allow images to take available space */
-      display: grid; /* Keep the grid layout for images */
-      grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns for images */
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 10px; /* Space between images */
+  }
+
+  .awards-images img {
+    width: 100%; /* Images will occupy full width of their container */
+    max-width: 180px; /* Set the maximum width for each image */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
@@ -624,8 +642,6 @@ p {
 /* Style the ordered list */
 ol {
   list-style-type: none; /* Remove default list style */
-  padding: 0;
-  margin: 0;
   display: grid; /* Use grid for the layout */
   grid-template-columns: 1fr; /* On small screens, stack items vertically */
   gap: 2em; /* Add some spacing between the list items */
@@ -652,21 +668,21 @@ ol li img {
 
 ol li h3 {
   margin: 1em 0 0.5em;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 ol li p {
   margin: 0;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 /* Parent container */
 .containerButton {
   display: grid;
   place-items: center; /* Center the button horizontally */
-  width: 100vw; /* Full width of the viewport */
+  width: 100%;
+  max-width: 100%; /* Full width of the viewport */
   box-sizing: border-box;
-  padding: 1em; /* Prevent button from touching the edges */
 }
 
 /* Button styling */
@@ -685,18 +701,9 @@ ol li p {
   border: 2px solid var(--color-text);
   background-color: var(--color-text);
   color: var(--color-background);
-  cursor: pointer;
   width: auto;
   max-width: 100%; /* Prevents button from exceeding container width */
   overflow: hidden; /* Ensures content doesn’t overflow */
-  white-space: nowrap; /* Prevent text from wrapping */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
-}
-
-/* Ensure the button text doesn't break into a new line */
-#viewButton span {
-  white-space: nowrap; /* Keep text and svg on the same line */
-  margin-left: 0.5em; /* Space between text and the SVG */
 }
 
 /*************/
@@ -730,7 +737,6 @@ ol li p {
 
 .stacked-items li p {
   margin: 0.5em 0 0; /* Adjust margins */
-  font-size: 1em; /* Normal text size */
 }
 
 /* Media query for larger screens (64em and above) */
@@ -757,8 +763,6 @@ section {
 /* Styles for the ordered list */
 .team-list {
   list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
   display: grid; /* Use grid for layout */
   grid-template-columns: 1fr; /* Single column by default */
   gap: 2em; /* Space between items */
@@ -767,18 +771,25 @@ section {
 /* Styles for the list items */
 .team-list li {
   background-color: var(--color-background); /* Adjust background color if needed */
-  padding: 1em; /* Padding inside each list item */
   border-radius: 8px; /* Rounded corners for items */
   display: flex; /* Use flex to align items vertically */
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
+  font-size: 0.9em;
+}
+
+.team-list li p {
+  font-size: 1.5em;
+}
+
+.team-list li a {
+  font-size: 1.5em;
 }
 
 /* Style for images or GIFs */
 .team-list li img {
   max-height: 5em; /* Maximum height of the image */
   width: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image fits well */
   margin-bottom: 0.5em; /* Space below the image */
 }
 
@@ -796,7 +807,6 @@ section {
   display: grid; /* Use grid for layout */
   grid-template-columns: 1fr auto; /* Left column for copyright, right for social media */
   align-items: end; /* Align items to the bottom of the grid */
-  padding: 1em; /* Padding for spacing */
   max-width: 100%; /* Full width */
 }
 
@@ -826,5 +836,4 @@ section {
 #letsWork {
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
 }
