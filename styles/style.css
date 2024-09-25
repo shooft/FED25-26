@@ -773,7 +773,6 @@ section {
   border-radius: 8px; /* Rounded corners for items */
   display: flex; /* Use flex to align items vertically */
   flex-direction: column; /* Stack items vertically */
-  align-items: left; /* Center items horizontally */
   font-size: 1em;
   background-color: white;
   border-radius: 20px;
@@ -842,4 +841,74 @@ section {
 #letsWork {
   display: flex;
   justify-content: center;
+}
+
+
+/**************/
+/* Workpagina */
+/**************/
+img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+.cobot-section {
+  padding: 20px;
+}
+
+.cobot-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.cobot-section p {
+  margin-bottom: 20px;
+}
+
+.media-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack items on small screens */
+  gap: 20px;
+}
+
+.media-container img,
+.media-container video {
+  width: 100%; /* Make images and videos responsive */
+  display: block;
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Media query for screens larger than 64em */
+@media (min-width: 64em) {
+  .media-container {
+    grid-template-columns: 1fr 1fr; /* Two columns side by side */
+    grid-auto-rows: auto; /* Automatically size rows based on content */
+  }
+
+  .media-container img,
+  .media-container video {
+    grid-column: span 1; /* Each item spans one column */
+  }
+
+  /* Specific styles for the two videos to appear side by side */
+  .video-pair {
+    grid-column: span 2; /* Allow the video pair to span both columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the videos */
+    gap: 20px; /* Space between the two videos */
+  }
+
+  .video-pair video {
+    grid-column: span 1; /* Each video spans one column within the pair */
+  }
+}
+
+.quote {
+  display: grid;
+  place-items: center; /* Center the content both horizontally and vertically */
+}
+
+.quote > p {
+  max-width: 50%; /* Limit the width of the paragraph */
+  text-align: center; /* Center the text within the paragraph */
 }
