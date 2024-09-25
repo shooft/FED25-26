@@ -38,23 +38,30 @@ body {
 /**************/ 
 /* TYPOGRAPHY */
 /**************/
-h1 {
+h1, h2, h3, a, li, h4, p, button {
+  margin-bottom: 0.5em;
+}
+
+h1, h4, p, button {
   font-family: "PP-Mori-Light";
-  font-size: clamp(2em, 5vw + 1em, 4em); /* Responsive font size */
-  text-align: left;
 }
 
 h2, h3, a, li {
   font-family: "PP-Mori-Regular";
-  font-size: clamp(1.5em, 3vw + 1em, 2.5em); /* Responsive font size */
-  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: clamp(2em, 5vw + 1em, 4em);
+  text-align: left;
+}
+
+h2, h3, a, li {
+  font-size: clamp(1.5em, 3vw + 1em, 2.5em);
 }
 
 h4, p, button {
-  font-family: "PP-Mori-Light";
-  font-size: clamp(0.9em, 2vw + 0.5em, 1.2em); /* Responsive font size */
+  font-size: clamp(0.9em, 2vw + 0.5em, 1.2em);
   line-height: 1.6;
-  margin-bottom: 1em;
 }
 
 /****************/
@@ -152,7 +159,7 @@ h4, p, button {
 
 .nav .nav-wrapper nav a {
   color: var(--color-background);
-  font-size: clamp(1.8em, 3vw + 1em, 2.3em); /* Responsive font size */
+  font-size: clamp(1.8em, 3vw + 1em, 2.3em);
   text-decoration: none;
   margin: 15px 0;
   opacity: 0;
@@ -194,24 +201,19 @@ nav a:hover::after {
   width: 100%;
 }
 
-/*******************/
-/* MENU OPEN STATE */
-/*******************/
-#toggle:checked + .hamburger + .nav .nav-wrapper nav a {
-  opacity: 0.9;
-  transform: scale(1);
-  transition-delay: 0.2s;
-}
-
 /************************/
 /* MAIN CONTENT STYLING */
 /************************/
-main {
+main, section {
   display: grid;
-  grid-template-columns: 1fr; /* Single column by default */
   gap: 2em;
   margin: 0 auto;
   padding: 0 2em;
+  max-width: 100%;
+}
+
+main {
+  grid-template-columns: 1fr;
 }
 
 main > h1 {
@@ -219,13 +221,11 @@ main > h1 {
   margin-bottom: 0.5em;
 }
 
-/* Header container styles */
 .main-header {
-  display: flex; /* Use flex for initial layout */
-  flex-direction: column; /* Stack vertically by default */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Button styles */
 .main-header button,
 footer > button {
   padding: 0.75em 2em;
@@ -233,42 +233,19 @@ footer > button {
   border: none;
 }
 
-/* Responsive layout for larger screens */
-@media (min-width: 64em) { /* 1024px */
-  .main-header {
-    flex-direction: column; /* Change to row for larger screens */
-    align-items: center; /* Align items vertically */
-    gap: 1em; /* Space between button and h2 */
-  }
-
-  /* Ensure button takes up necessary space */
+/* Responsive layout */
+@media (min-width: 48em) { /* Medium screens and up */
   .main-header button {
-    margin-right: auto; /* Push button to the left */
+    margin-right: auto;
   }
 }
 
-/* Medium screens layout adjustments */
-@media (min-width: 48em) and (max-width: 63.99em) { /* 768px to 1024px */
+@media (min-width: 64em) { /* Large screens */
   .main-header {
     flex-direction: column;
+    align-items: center;
+    gap: 1em;
   }
-  .main-header button {
-    margin-right: auto; /* Push button to the left */
-  }
-}
-
-/* Small screens layout adjustments */
-@media (max-width: 47.99em) { /* Below 768px */
-  .main-header {
-    flex-direction: column;
-  }
-  .main-header button {
-    margin-right: auto; /* Push button to the left */
-  }
-}
-
-ol {
-  list-style-type: none;
 }
 
 /*****************/
@@ -280,157 +257,98 @@ video {
   width: 100%;
   height: auto;
   margin: 2em 0;
-  max-width: 100%;
 }
 
 #firstVideo {
   position: relative;
-  width: 100%;
-  height: auto;
 }
 
 /***************/
 /* GRID LAYOUT */
 /***************/
-section {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column by default */
-  gap: 2em;
-  padding: 2em 0;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-article {
-  background-color: var(--color-background);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  max-width: 100%;
-}
-
-/* Article styling */
 article {
   background-color: var(--color-background);
   display: flex;
-  flex-direction: column; /* Stack items by default */
+  flex-direction: column;
   gap: 1em;
   max-width: 100%;
 }
 
-/* Alternate the layout for even articles */
-article:nth-of-type(even) {
-  flex-direction: column;
-}
-
-/* Layout for odd articles */
-article:nth-of-type(odd) {
-  flex-direction: column;
-}
-
-/* Layout for even articles */
-article:nth-of-type(even) {
-  grid-template-areas: "video text"; /* Video on left, text on right */
-}
-
-/* Medium and larger screens layout */
-@media (min-width: 64em) { /* 1024px */
-  section {
-    display: grid; /* Use grid layout for the section */
-  }
-
-  /* Article styling for larger screens */
+/* Alternate layout for larger screens */
+@media (min-width: 64em) {
   article {
-    display: grid; /* Use grid layout for each article */
-    grid-template-columns: 1fr 1fr; /* Two equal columns for text and video */
-    gap: 1em; /* Space between text and video */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  /* Layout for odd articles */
   article:nth-of-type(odd) {
-    grid-template-areas: "text video"; /* Text on left, video on right */
+    grid-template-areas: "text video";
   }
 
-  /* Layout for even articles */
   article:nth-of-type(even) {
-    grid-template-areas: "video text"; /* Video on left, text on right */
+    grid-template-areas: "video text";
   }
 
-  /* Assign grid areas */
   article video {
-    grid-area: video; /* Assign the video to the video area */
+    grid-area: video;
     border-radius: 1em;
   }
 
   .text-content {
     display: flex;
-    flex-direction: column; /* Stack header and paragraph vertically */
-    justify-content: center; /* Center vertically within the text area */
-    align-items: flex-start; /* Align text to the left */
-    grid-area: text; /* Assign the text content to the text area */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: text;
   }
-}
-
-h3 {
-  font-size: clamp(1.4em, 2.5vw + 0.5em, 1.8em);
-  margin-top: 0.75em;
-}
-
-p {
-  font-size: clamp(0.9em, 2vw + 0.5em, 1.2em);
-  margin-top: 0.5em;
 }
 
 /*******************/
 /* INDUSTRIES SECTION STYLING */
 /*******************/
 .industries {
-  display: flex; /* Use flex layout */
-  flex-direction: column; /* Stack items vertically by default */
-  padding: 2em 0; /* Padding around the section */
+  display: flex;
+  flex-direction: column;
+  padding: 2em 0;
 }
 
-/* Left content styling */
 .left-content {
-  max-width: 60%; /* Limit width for better readability */
-  display: flex; /* Enable flexbox for vertical centering */
-  flex-direction: column; /* Stack header and paragraph vertically */
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Right content styling */
 .right-content {
-  display: flex; /* Display as flex for column stacking */
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align items to the start */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* Industries layout for larger screens */
-@media (min-width: 64em) { /* MacBook size and above */
+/* Larger screens layout */
+@media (min-width: 64em) {
   .industries {
-      flex-direction: row; /* Align items in a row */
-      gap: 2em; /* Space between left and right sections */
-      align-items: center; /* Center items vertically */
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
   }
 
   .industries ul {
-      list-style-position: inside; /* Optional: Change bullet position */
-      padding-left: 0; /* Remove padding */
+    list-style-position: inside;
+    padding-left: 0;
   }
 
   .industries h3 {
-      font-size: clamp(1.6em, 3vw + 0.5em, 2em); /* Responsive font size */
-      margin: 0.5em 0; /* Top and bottom margins */
+    font-size: clamp(1.6em, 3vw + 0.5em, 2em);
+    margin: 0.5em 0;
   }
 
   .industries p {
-      font-size: clamp(1em, 2vw + 0.5em, 1.2em); /* Responsive font size */
-      margin: 0.5em 0; /* Top and bottom margins */
+    font-size: clamp(1em, 2vw + 0.5em, 1.2em);
+    margin: 0.5em 0;
   }
 
-  /* Center the left content vertically */
   .left-content {
-      justify-content: center; /* Center the content vertically */
-      display: flex; /* Ensure flex display for vertical alignment */
+    justify-content: center;
   }
 }
 
@@ -438,27 +356,26 @@ p {
 /* LIST STYLING */
 /*******************/
 .industries-list {
-  padding: 0;                   /* Remove default padding */
-  list-style-type: none;        /* Remove default list styling */
+  padding: 0;
+  list-style-type: none;
 }
 
 /* Flexbox styles for larger screens */
-@media (min-width: 64em) { /* Adjust this value if needed for your break point */
+@media (min-width: 64em) {
   .industries-list {
-      display: flex;                 /* Use flexbox for the list */
-      justify-content: space-between; /* Evenly space the items */
-      width: 100%;                  /* Ensure the list takes the full width */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .industries-list li {
-      text-align: center;           /* Center align the text in each item */
-      flex: 1;                      /* Allow items to grow equally */
-      margin: 0;                    /* Remove horizontal margin to avoid overflow */
+    text-align: center;
+    flex: 1;
+    margin: 0;
   }
 
-  /* Optional: To add a bit of space between the items */
   .industries-list li:not(:last-child) {
-      margin-right: 6em;           /* Add space between items */
+    margin-right: 6em;
   }
 }
 
@@ -466,19 +383,19 @@ p {
 /* BRANDS SECTION STYLING */
 /*******************/
 .brands {
-  padding: 2em 0;                /* Padding around the brands section */
+  padding: 2em 0;
 }
 
 .brands-logos {
-  display: grid;                 /* Use grid layout */
-  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-  gap: 20px;                     /* Space between items */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .brands-logos img {
-  width: 100%;                   /* Make images responsive */
-  height: auto;                  /* Maintain aspect ratio */
-  display: block;                /* Ensure no extra space below images */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /************/
@@ -623,33 +540,26 @@ p {
     justify-content: center; /* Center text vertically */
   }
 
-  .awards-images {
-    grid-template-columns: repeat(2, 1fr); /* Two images per row */
-    gap: 10px; /* Space between images */
-  }
-
   .awards-images img {
-    width: 100%; /* Images will occupy full width of their container */
     max-width: 180px; /* Set the maximum width for each image */
     height: auto; /* Maintain aspect ratio */
   }
 }
 
 /*************/
-/*Recent work*/
+/* Recent Work */
 /*************/
-/* Style the ordered list */
 ol {
   list-style-type: none; /* Remove default list style */
   display: grid; /* Use grid for the layout */
   grid-template-columns: 1fr; /* On small screens, stack items vertically */
   gap: 2em; /* Add some spacing between the list items */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 /* Style the list items */
 ol li {
-  display: block;
+  display: block; /* Ensure block display for list items */
 }
 
 /* Media query for larger screens (bigger than 64em) */
@@ -662,57 +572,55 @@ ol li {
 /* General styles for images and text */
 ol li img {
   width: 100%; /* Make the image take up the full width of the list item */
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
 }
 
 ol li h3 {
-  margin: 1em 0 0.5em;
-  font-size: 1em;
+  margin: 1em 0 0.5em; /* Spacing for headings */
+  font-size: 1em; /* Heading size */
 }
 
 ol li p {
-  margin: 0;
-  font-size: 0.8em;
+  margin: 0; /* Remove default margin */
+  font-size: 0.8em; /* Paragraph size */
 }
 
 /* Parent container */
 .containerButton {
   display: grid;
   place-items: center; /* Center the button horizontally */
-  width: 100%;
-  max-width: 100%; /* Full width of the viewport */
+  width: 100%; /* Full width of the viewport */
+  max-width: 100%; /* Prevents button from exceeding container width */
   box-sizing: border-box;
 }
 
 /* Button styling */
 #viewButton, #sayButton {
-  height: 4.24em;
+  height: 4.24em; 
   line-height: calc(4.25em - 4px + 0.125em);
-  border-radius: 2.125em;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  font-weight: 400;
+  border-radius: 2.125em; 
+  padding-left: 2.5em; /* Padding left */
+  padding-right: 2.5em; /* Padding right */
+  font-weight: 400; 
   display: flex; /* Use flexbox to align text and svg */
   align-items: center; /* Vertically center the text and SVG */
   justify-content: center; /* Center content horizontally */
-  gap: 0.5em; /* Add some space between the text and SVG */
-  box-sizing: border-box;
-  border: 2px solid var(--color-text);
-  background-color: var(--color-text);
-  color: var(--color-background);
-  width: auto;
-  max-width: 100%; /* Prevents button from exceeding container width */
+  gap: 0.5em; /* Space between text and SVG */
+  box-sizing: border-box; /* Include padding in width */
+  border: 2px solid var(--color-text); 
+  background-color: var(--color-text); 
+  color: var(--color-background); 
+  width: auto; /* Button width */
   overflow: hidden; /* Ensures content doesn’t overflow */
 }
 
 /*************/
-/*How we work*/
+/* How We Work */
 /*************/
-/* Reset default styles for ordered list */
 .stacked-items {
   list-style: none; /* Remove default list numbering */
-  padding: 0;
-  margin: 0;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
 }
 
 /* Default styles for list items */
@@ -752,11 +660,10 @@ ol li p {
 }
 
 /**********/
-/*LinkedIn*/
+/* LinkedIn */
 /**********/
-/* Base styles for the section */
 section {
-  padding: 2em 0;
+  padding: 2em 0; /* Vertical padding */
 }
 
 /* Styles for the ordered list */
@@ -769,37 +676,30 @@ section {
 
 /* Styles for the list items */
 .team-list li {
-  background-color: var(--color-background); /* Adjust background color if needed */
-  border-radius: 8px; /* Rounded corners for items */
+  background-color: white; /* Adjust background color */
+  border-radius: 20px; /* Rounded corners for items */
   display: flex; /* Use flex to align items vertically */
   flex-direction: column; /* Stack items vertically */
-  font-size: 1em;
-  background-color: white;
-  border-radius: 20px;
-  padding: 1em;
+  font-size: 1em; /* Font size for text */
+  padding: 1em; /* Inner padding */
 }
 
-.team-list li p {
-  font-size: 1.5em;
-  padding: 1em;
-}
-
+.team-list li p,
 .team-list li a {
-  font-size: 1.5em;
-  color: var(--color-text);
-  padding: 1em;
+  font-size: 1.5em; /* Consistent font size */
+  padding: 1em; /* Padding for text */
+  color: var(--color-text); /* Text color */
 }
 
 /* Style for images or GIFs */
 .team-list li img {
-  max-width: 10em;
+  max-width: 10em; /* Max width for images */
   margin-bottom: 0.5em; /* Space below the image */
-  border-radius: 50%;
-  padding: 1em;
+  border-radius: 50%; /* Circular images */
 }
 
 /* Responsive styles for larger screens */
-@media (min-width: 64em) { /* 1024px */
+@media (min-width: 64em) { 
   .team-list {
       grid-template-columns: repeat(3, 1fr); /* Three columns layout */
   }
@@ -839,43 +739,45 @@ section {
 }
 
 #letsWork {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Center the content */
+  justify-content: center; /* Center horizontally */
 }
-
 
 /**************/
 /* Workpagina */
 /**************/
 img {
-  width: 100%;
-  border-radius: 1em;
+  width: 100%; /* Make images responsive */
+}
+
+img:not(:first-child) {
+  border-radius: 1em; /* Rounded corners */
 }
 
 .cobot-section {
-  padding: 20px;
+  padding: 20px; /* Padding around the section */
 }
 
 .cobot-section h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2em; /* Heading size */
+  margin-bottom: 10px; /* Spacing below heading */
 }
 
 .cobot-section p {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Spacing below paragraph */
 }
 
 .media-container {
-  display: grid;
+  display: grid; /* Use grid layout */
   grid-template-columns: 1fr; /* Stack items on small screens */
-  gap: 20px;
+  gap: 20px; /* Space between items */
 }
 
+/* Responsive images and videos */
 .media-container img,
 .media-container video {
-  width: 100%; /* Make images and videos responsive */
-  display: block;
-  border-radius: 8px; /* Optional: Add rounded corners */
+  display: block; /* Ensure proper sizing */
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
 /* Media query for screens larger than 64em */
@@ -885,30 +787,22 @@ img {
     grid-auto-rows: auto; /* Automatically size rows based on content */
   }
 
-  .media-container img,
-  .media-container video {
-    grid-column: span 1; /* Each item spans one column */
-  }
-
   /* Specific styles for the two videos to appear side by side */
   .video-pair {
     grid-column: span 2; /* Allow the video pair to span both columns */
-    display: grid;
+    display: grid; /* Nested grid layout */
     grid-template-columns: 1fr 1fr; /* Two columns for the videos */
     gap: 20px; /* Space between the two videos */
   }
-
-  .video-pair video {
-    grid-column: span 1; /* Each video spans one column within the pair */
-  }
 }
 
+/* Centered quote styling */
 .quote {
-  display: grid;
+  display: grid; /* Use grid layout */
   place-items: center; /* Center the content both horizontally and vertically */
+  text-align: center; /* Center text within the paragraph */
 }
 
 .quote > p {
   max-width: 50%; /* Limit the width of the paragraph */
-  text-align: center; /* Center the text within the paragraph */
 }
