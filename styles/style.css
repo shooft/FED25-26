@@ -11,12 +11,12 @@
 /*********/
 @font-face {
   font-family: "PP-Mori-Regular";
-  src: url("/font/PPMori-Regular.b106d8fe.woff2") format('woff2');
+  src: url(/font/PPMori-Regular.b106d8fe.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "PP-Mori-Light";
-  src: url("/font/PPMori-Light.0f42b11c.woff2") format('woff2');
+  src: url(/font/PPMori-Light.0f42b11c.woff2) format("woff2");
 }
 
 /**************/ 
