@@ -1,10 +1,23 @@
-/*********************************************************** CUSTOM PROPERTIES */
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
 :root {
   --color-text: #161715;
   --color-background: #f7f7f7;
+
+  --padding: 1em;
+  --border-radius: 1em;
+  --font-size-heading: 2em;
+  --margin: 1em;
+  --max-width: 50%;
+  --gap-small: 1em;
+  --gap-large: 2em;
 }
 
-/*********************************************************** FONTS */
+
+/*********/
+/* FONTS */
+/*********/
 @font-face {
   font-family: "PP-Mori-Regular";
   src: url("/font/PPMori-Regular.b106d8fe.woff2") format("woff2");
@@ -15,7 +28,10 @@
   src: url("/font/PPMori-Light.0f42b11c.woff2") format("woff2");
 }
 
-/*********************************************************** CSS REMEDY */
+
+/**************/
+/* CSS REMEDY */
+/**************/
 *,
 *::after,
 *::before {
@@ -29,7 +45,10 @@ body {
   overflow-x: hidden;
 }
 
-/*********************************************************** TYPOGRAPHY */
+
+/**************/
+/* TYPOGRAPHY */
+/**************/
 h1,
 h2,
 h3,
@@ -74,7 +93,10 @@ button {
   line-height: 1.6;
 }
 
-/*********************************************************** LOGO STYLING */
+
+/****************/
+/* LOGO STYLING */
+/****************/
 #logo {
   position: fixed;
   top: 1em;
@@ -86,7 +108,10 @@ button {
   width: 6em;
 }
 
-/*********************************************************** HAMBURGER MENU */
+
+/******************/
+/* HAMBURGER MENU */
+/******************/
 .hamburger {
   position: fixed;
   top: 10px;
@@ -121,7 +146,10 @@ button {
   display: none;
 }
 
-/*********************************************************** HAMBURGER ANIMATION */
+
+/***********************/
+/* HAMBURGER ANIMATION */
+/***********************/
 #toggle:checked + .hamburger .unchecked {
   opacity: 0;
 }
@@ -130,7 +158,10 @@ button {
   opacity: 1;
 }
 
-/*********************************************************** MENU STYLING */
+
+/****************/
+/* MENU STYLING */
+/****************/
 .nav {
   position: fixed;
   top: 0;
@@ -166,14 +197,17 @@ button {
   opacity: 0.9; /* Fade in items */
 }
 
-/*********************************************************** HOVER EFFECT WITH WHITE LINE UNDER LINK */
+
+/*******************************************/
+/* HOVER EFFECT WITH WHITE LINE UNDER LINK */
+/*******************************************/
 nav a {
   position: relative;
   display: inline-block;
 }
 
 nav a::after {
-  content: "";
+  content: ""; /* To have space for the underline */
   position: absolute;
   width: 0;
   height: 2px;
@@ -186,11 +220,14 @@ nav a:hover::after {
   width: 100%;
 }
 
-/*********************************************************** MAIN CONTENT STYLING */
+
+/************************/
+/* MAIN CONTENT STYLING */
+/************************/
 main,
 section {
   display: grid;
-  gap: 2em;
+  gap: var(--gap-large);
   margin: 0 auto;
   padding: 0 2em;
   max-width: 100%;
@@ -217,11 +254,15 @@ footer button {
   display: grid;
 }
 
+/* So that the arrow is going the other way */
 footer button:not(:first-child) {
   transform: rotate(180deg);
 }
 
-/*********************************************************** VIDEO STYLING */
+
+/*****************/
+/* VIDEO STYLING */
+/*****************/
 video {
   top: 0;
   left: 0;
@@ -234,16 +275,22 @@ video {
   position: relative;
 }
 
-/*********************************************************** GRID LAYOUT */
+
+/***************/
+/* GRID LAYOUT */
+/***************/
 article {
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: var(--gap-small);
   max-width: 100%;
 }
 
-/*********************************************************** INDUSTRIES SECTION STYLING */
+
+/******************************/
+/* INDUSTRIES SECTION STYLING */
+/******************************/
 .industries {
   display: flex;
   flex-direction: column;
@@ -262,14 +309,19 @@ article {
   align-items: flex-start;
 }
 
-/*********************************************************** LIST STYLING */
+
+/****************/
+/* LIST STYLING */
+/****************/
 .industries-list {
   padding: 0;
   list-style-type: none;
   text-align: center;
 }
 
-/*********************************************************** BRANDS SECTION STYLING */
+/**************************/
+/* BRANDS SECTION STYLING */
+/**************************/
 .brands {
   padding: 2em 0;
 }
@@ -277,7 +329,7 @@ article {
 .brands-logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: var(--gap-small);
 }
 
 .brands-logos img {
@@ -286,22 +338,24 @@ article {
   display: block;
 }
 
-/*********************************************************** Carousel */
+
+/************/
+/* CAROUSEL */
+/************/
 .carousel-wrapper {
   position: relative;
   overflow: hidden; /* Hide overflow to ensure no content spills out */
   width: 100%; /* Full width for responsiveness */
-  max-width: 800px; /* Optional max width */
-  margin: auto; /* Center the carousel */
+  max-width: 50em; /* So that the items don't go further then their view on bigger screen */
 }
 
 .carousel-list {
-  display: flex; /* Flexbox for horizontal layout */
-  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  display: flex; /* For horizontal layout */
+  transition: 0.5s ease; /* Smooth transition for sliding */
 }
 
 .carousel-list ul {
-  display: flex; /* Flex layout for list */
+  display: flex;
   padding: 0;
   margin: 0;
   list-style: none; /* Remove list bullets */
@@ -310,106 +364,92 @@ article {
 
 .carousel-list li {
   flex: 0 0 100%; /* Each item takes full width of the carousel view by default */
-  box-sizing: border-box; /* Include padding in the width calculation */
-  padding: 2em; /* Adjust padding for inside each item */
-  overflow: hidden; /* Hide overflow */
+  padding: 2em; /* So that the buttons don't overlap the text */
+  overflow: hidden;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: flex-start; /* Align content to the top */
-  align-items: flex-start; /* Align content to the left */
-  background-color: var(--color-background); /* Background color for a card effect */
-  margin: 0; /* Remove margin to avoid additional spacing */
-  max-width: 100%; /* Ensure item doesn't exceed carousel width */
+  flex-direction: column;
 }
 
+/* The buttons */
 .carousel-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  font-size: 2em; /* Size of navigation */
-  color: var(--color-text); /* Desired color */
-  padding: 0 1em; /* Padding around buttons */
+  font-size: 2em;
+  color: var(--color-text);
+  padding: 0 1em;
   z-index: 100; /* Ensure nav buttons are above the content */
 }
 
 .carousel-nav.left {
-  left: 0; /* Position left button */
+  left: 0;
 }
 
 .carousel-nav.right {
-  right: 0; /* Position right button */
+  right: 0;
 }
 
 .carousel-list p {
   font-size: 1em; /* Adjust font size for readability */
-  white-space: normal; /* Allow text to wrap */
-  word-wrap: break-word; /* Ensure long words wrap properly */
-  margin: 0.5em 0; /* Add margins for spacing */
-  max-width: 100%; /* Ensure p doesn't exceed the card width */
-  overflow-wrap: break-word; /* Break long words */
-  text-align: left; /* Ensure text aligns to the left */
 }
 
 .carousel-list h3 {
-  font-size: 1em; /* Header size */
-  margin: 0.5em 0; /* Add margins */
+  font-size: 1em;
 }
 
 .carousel-list h4 {
-  font-size: 0.8em; /* Adjust subtitle size */
-  font-weight: normal; /* Optional: change font weight */
-  margin: 0.3em 0; /* Add margin */
+  font-size: 0.8em;
 }
 
-/*********************************************************** Awards */
+
+/**********/
+/* AWARDS */
+/**********/
 .awards-section {
-  display: grid; /* Use grid layout for the section */
-  grid-template-columns: 1fr; /* One column by default */
-  justify-items: center; /* Center the content horizontally */
-  padding: 20px; /* Padding around the section */
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--gap-large);
 }
 
 .awards-card {
   background-color: var(--color-text); /* Black background */
   color: var(--color-background); /* White text */
-  border-radius: 2em; /* Rounded corners */
-  padding: 20px; /* Inner padding */
-  max-width: 1000px; /* Max width for larger screens */
-  width: 100%; /* Full width on smaller screens */
-  display: grid; /* Use grid layout for the card */
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  max-width: 64em;
+  width: 100%;
+  display: grid;
   grid-template-columns: 1fr; /* Stack header and paragraph vertically by default */
-  gap: 20px; /* Space between text and images */
-  box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
+  gap: var(--gap-small);
 }
 
 .awards-text {
-  text-align: left; /* Left-align the text */
+  text-align: left;
 }
 
 .awards-images {
-  display: grid; /* Grid layout for images */
+  display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 images per row */
-  gap: 10px; /* Space between images */
+  gap: var(--gap-small);
 }
 
 .awards-images img {
-  width: 100%; /* Responsive images */
-  border-radius: 8px; /* Rounded corners for images */
+  width: 100%;
 }
 
-/*********************************************************** Recent Work */
+
+/***************/
+/* RECENT WORK */
+/***************/
 ol {
-  list-style-type: none; /* Remove default list style */
-  display: grid; /* Use grid for the layout */
+  display: grid;
   grid-template-columns: 1fr; /* On small screens, stack items vertically */
-  gap: 2em; /* Add some spacing between the list items */
-  box-sizing: border-box; /* Include padding in width */
+  gap: var(--gap-large);
 }
 
-/* Style the list items */
 ol li {
-  display: block; /* Ensure block display for list items */
+  list-style-type: none;
 }
 
 /* General styles for images and text */
@@ -419,21 +459,19 @@ ol li img {
 }
 
 ol li h3 {
-  margin: 1em 0 0.5em; /* Spacing for headings */
-  font-size: 1em; /* Heading size */
+  font-size: 1em;
 }
 
 ol li p {
-  margin: 0; /* Remove default margin */
   font-size: 0.8em; /* Paragraph size */
 }
 
 /* Parent container */
 .containerButton {
   display: grid;
-  place-items: center; /* Center the button horizontally */
-  width: 100%; /* Full width of the viewport */
-  max-width: 100%; /* Prevents button from exceeding container width */
+  place-items: center;
+  width: 100%;
+  max-width: 100%; /* Prevents button from going wider then container */
   box-sizing: border-box;
 }
 
@@ -442,181 +480,153 @@ ol li p {
 #sayButton {
   height: 4.24em;
   line-height: calc(4.25em - 4px + 0.125em);
-  border-radius: 2.125em;
-  padding-left: 2.5em; /* Padding left */
-  padding-right: 2.5em; /* Padding right */
-  font-weight: 400;
-  display: flex; /* Use flexbox to align text and svg */
-  align-items: center; /* Vertically center the text and SVG */
-  justify-content: center; /* Center content horizontally */
-  gap: 0.5em; /* Space between text and SVG */
-  box-sizing: border-box; /* Include padding in width */
+  border-radius: var(--border-radius);
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-small);
   border: 2px solid var(--color-text);
   background-color: var(--color-text);
   color: var(--color-background);
-  width: auto; /* Button width */
-  overflow: hidden; /* Ensures content doesn’t overflow */
 }
 
-/*********************************************************** How We Work */
-.stacked-items {
-  list-style: none; /* Remove default list numbering */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-}
 
-/* Default styles for list items */
-.stacked-items li {
-  display: block; /* Block display for stacking */
-  margin-bottom: 2em; /* Space between items */
-}
-
+/***************/
+/* HOW WE WORK */
+/***************/
 /* Ensure video takes full width of its container */
 .stacked-items li video {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Block display for proper sizing */
+  width: 100%;
+  height: auto;
 }
 
-/* Heading and paragraph styling */
-.stacked-items li h3 {
-  margin-top: 1em; /* Space above heading */
-  font-size: 1.5em; /* Adjust heading size */
-}
 
-.stacked-items li p {
-  margin: 0.5em 0 0; /* Adjust margins */
-}
-
-/*********************************************************** Social media */
+/****************/
+/* SOCIAL MEDIA */
+/****************/
 section {
-  padding: 2em 0; /* Vertical padding */
+  padding: 2em 0;
 }
 
 /* Styles for the ordered list */
 .team-list {
-  list-style: none; /* Remove default list styling */
-  display: grid; /* Use grid for layout */
-  grid-template-columns: 1fr; /* Single column by default */
-  gap: 2em; /* Space between items */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-large);
 }
 
 /* Styles for the list items */
 .team-list li {
-  background-color: white; /* Adjust background color */
-  border-radius: 20px; /* Rounded corners for items */
-  display: flex; /* Use flex to align items vertically */
-  flex-direction: column; /* Stack items vertically */
-  font-size: 1em; /* Font size for text */
-  padding: 1em; /* Inner padding */
+  background-color: white;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  padding: var(--padding);
 }
 
 .team-list li p,
 .team-list li a {
-  font-size: 1.5em; /* Consistent font size */
-  padding: 1em; /* Padding for text */
-  color: var(--color-text); /* Text color */
+  font-size: 1.5em;
+  padding: var(--padding);
+  color: var(--color-text);
 }
 
 /* Style for images or GIFs */
 .team-list li img {
-  max-width: 10em; /* Max width for images */
-  margin-bottom: 0.5em; /* Space below the image */
-  border-radius: 50%; /* Circular images */
+  max-width: 10em;
+  border-radius: 50%;
 }
 
-/*********************************************************** Footer */
+
+/**********/
+/* FOOTER */
+/**********/
+#letsWork {
+  display: flex;
+  justify-content: center;
+}
+
 .footer {
-  display: grid; /* Use grid for layout */
+  display: grid;
   grid-template-columns: 1fr auto; /* Left column for copyright, right for social media */
-  align-items: end; /* Align items to the bottom of the grid */
-  max-width: 100%; /* Full width */
-}
-
-.footer p {
-  margin: 0; /* Remove default margin */
+  align-items: end;
+  max-width: 100%;
 }
 
 /* Social media links */
 .social-media {
-  display: flex; /* Flexbox for social media icons */
-  gap: 1em; /* Space between social media icons */
-  justify-self: end; /* Align social media links to the right */
+  display: flex;
+  gap: var(--gap-small);
+  justify-self: end;
   list-style-type: none;
 }
 
-/* Ensure each SVG link has a max height of 1em */
-.social-media a {
-  display: flex; /* Ensure the anchor is a flex container */
-  align-items: center; /* Center the SVG vertically */
-}
-
 .social-media svg {
-  height: 0.5em; /* Maximum height of the SVG */
-  width: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image fits well */
+  height: 0.5em;
+  width: auto;
 }
 
-#letsWork {
-  display: flex; /* Center the content */
-  justify-content: center; /* Center horizontally */
-}
 
-/*********************************************************** Extra for Work pagina */
+/**********************/
+/* EXTRA FOR WORKPAGE */
+/**********************/
 img {
-  width: 100%; /* Make images responsive */
+  width: 100%;
 }
 
+/* Apply border-radius to all but the first child image and video */
 img:not(:first-child),
-video:not(:first-child) {
-  border-radius: 1em;
-}
-
-.cobot-section {
-  padding: 20px; /* Padding around the section */
-}
-
-.cobot-section h2 {
-  font-size: 2em; /* Heading size */
-  margin-bottom: 10px; /* Spacing below heading */
-}
-
-.cobot-section p {
-  margin-bottom: 20px; /* Spacing below paragraph */
-}
-
-.media-container {
-  display: grid; /* Use grid layout */
-  grid-template-columns: 1fr; /* Stack items on small screens */
-  gap: 20px; /* Space between items */
-}
-
-/* Responsive images and videos */
+video:not(:first-child),
 .media-container img,
 .media-container video {
-  display: block; /* Ensure proper sizing */
-  border-radius: 1em; /* Optional: Rounded corners */
+  border-radius: var(--border-radius);
+}
+
+/* Padding for section */
+.cobot-section {
+  padding: var(--padding);
+}
+
+/* Heading styling within cobot-section */
+.cobot-section h2 {
+  font-size: var(--font-size-heading);
+  margin-bottom: var(--margin);
+}
+
+/* Paragraph styling within cobot-section */
+.cobot-section p {
+  margin-bottom: var(--margin);
+}
+
+/* Grid layout for media container */
+.media-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-small);
 }
 
 /* Centered quote styling */
 .quote {
   display: grid;
-  place-items: center; /* Center the content both horizontally and vertically */
-  text-align: center; /* Center text within the paragraph */
+  place-items: center; /* Center content both horizontally and vertically */
+  text-align: center;
 }
 
 .quote p {
-  max-width: 50%; /* Limit the width of the paragraph */
+  max-width: var(--max-width); /* Limit the width of the paragraph */
 }
 
 
 /****************************************/
-/* @Media / Responsive for large screen */
+/* @MEDIA / RESPONSIVE FOR LARGE SCREEN */
 /****************************************/
 @media (min-width: 64em) /* Macbook measurements */ {
   .main-header {
     flex-direction: column;
-    gap: 1em;
+    gap: var(--gap-small);
 
     margin-right: auto;
   }
@@ -637,7 +647,7 @@ video:not(:first-child) {
 
   article video {
     grid-area: video;
-    border-radius: 1em;
+    border-radius: var(--border-radius);
   }
 
   .text-header,
@@ -658,7 +668,7 @@ video:not(:first-child) {
   .industries {
     flex-direction: row;
     align-items: center;
-    gap: 2em;
+    gap: var(--gap-large);
   }
 
   .industries ul {
@@ -678,7 +688,7 @@ video:not(:first-child) {
 
   .left-content {
     justify-content: center;
-    max-width: 40%;
+    max-width: var(--max-width);
   }
 
   .right-content {
@@ -719,7 +729,7 @@ video:not(:first-child) {
     flex-direction: column;
     justify-content: center;
 
-    margin-right: 1em;
+    margin-right: var(--margin);
   }
 
   ol {
@@ -729,7 +739,7 @@ video:not(:first-child) {
   .stacked-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
+    gap: var(--gap-large);
   }
 
   .team-list {
@@ -746,6 +756,6 @@ video:not(:first-child) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: span 2; /* Allow the video pair to span both columns */
-    gap: 1em;
+    gap: var(--gap-small);
   }
 }
