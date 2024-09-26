@@ -616,7 +616,6 @@ video:not(:first-child) {
 @media (min-width: 64em) /* Macbook measurements */ {
   .main-header {
     flex-direction: column;
-    align-items: left;
     gap: 1em;
 
     margin-right: auto;
