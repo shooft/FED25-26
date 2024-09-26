@@ -141,12 +141,12 @@ button {
   overflow: hidden;
   z-index: 999;
   transition: height 0.3s ease-in-out;
-  display: grid; /* Use grid for layout */
+  display: grid;
   grid-template-rows: repeat(3, auto); /* Allow three rows for links */
 }
 
 .nav li {
-  list-style: none; /* Remove list bullet */
+  list-style: none;
 }
 
 .nav a {
@@ -221,16 +221,6 @@ footer button:not(:first-child) {
   transform: rotate(180deg);
 }
 
-@media (min-width: 64em) {
-  /* Large screens */
-  .main-header {
-    margin-right: auto;
-    flex-direction: column;
-    align-items: left;
-    gap: 1em;
-  }
-}
-
 /*********************************************************** VIDEO STYLING */
 video {
   top: 0;
@@ -253,35 +243,6 @@ article {
   max-width: 100%;
 }
 
-/* Alternate layout for larger screens */
-@media (min-width: 64em) {
-  article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  article:nth-of-type(odd) {
-    grid-template-areas: "text video";
-  }
-
-  article:nth-of-type(even) {
-    grid-template-areas: "video text";
-  }
-
-  article video {
-    grid-area: video;
-    border-radius: 1em;
-  }
-
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    grid-area: text;
-  }
-}
-
 /*********************************************************** INDUSTRIES SECTION STYLING */
 .industries {
   display: flex;
@@ -301,55 +262,11 @@ article {
   align-items: flex-start;
 }
 
-/* Larger screens layout */
-@media (min-width: 64em) {
-  .industries {
-    flex-direction: row;
-    gap: 2em;
-    align-items: center;
-  }
-
-  .industries ul {
-    list-style-position: inside;
-    padding-left: 0;
-  }
-
-  .industries h3 {
-    font-size: clamp(1.6em, 3vw + 0.5em, 2em);
-    margin: 0.5em 0;
-  }
-
-  .industries p {
-    font-size: clamp(1em, 2vw + 0.5em, 1.2em);
-    margin: 0.5em 0;
-  }
-
-  .left-content {
-    justify-content: center;
-  }
-}
-
 /*********************************************************** LIST STYLING */
 .industries-list {
   padding: 0;
   list-style-type: none;
   text-align: center;
-}
-
-/* Grid styles for larger screens */
-@media (min-width: 64em) {
-  .industries-a {
-    display: flex;
-  }
-
-  .industries-list {
-    display: flex;
-    width: 100%;
-  }
-
-  .industries-list li {
-    text-align: center; /* Center text within each grid item */
-  }
 }
 
 /*********************************************************** BRANDS SECTION STYLING */
@@ -445,18 +362,6 @@ article {
   margin: 0.3em 0; /* Add margin */
 }
 
-/* Additional Media Query for Larger Screens */
-@media (min-width: 64em) {
-  .carousel-list li {
-    flex: 0 0 20%; /* Set a specific width for each carousel item */
-    margin: 0 1.5%; /* Add margin to space out cards */
-  }
-
-  .carousel-list p {
-    max-width: 90%; /* Restrict the text width to prevent overflow */
-  }
-}
-
 /*********************************************************** Awards */
 .awards-section {
   display: grid; /* Use grid layout for the section */
@@ -493,26 +398,6 @@ article {
   border-radius: 8px; /* Rounded corners for images */
 }
 
-/* Responsive behavior for larger screens */
-@media (min-width: 64em) {
-  .awards-card {
-    grid-template-columns: 2fr 1fr; /* 2 parts for text and 1 for images */
-    align-items: flex-start; /* Align items to the top */
-  }
-
-  .awards-text {
-    margin-right: 20px; /* Space between text and images */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-  }
-
-  .awards-images img {
-    max-width: 180px; /* Set the maximum width for each image */
-    height: auto; /* Maintain aspect ratio */
-  }
-}
-
 /*********************************************************** Recent Work */
 ol {
   list-style-type: none; /* Remove default list style */
@@ -525,13 +410,6 @@ ol {
 /* Style the list items */
 ol li {
   display: block; /* Ensure block display for list items */
-}
-
-/* Media query for larger screens (bigger than 64em) */
-@media (min-width: 64em) {
-  ol {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on larger screens */
-  }
 }
 
 /* General styles for images and text */
@@ -610,19 +488,6 @@ ol li p {
   margin: 0.5em 0 0; /* Adjust margins */
 }
 
-/* Media query for larger screens (64em and above) */
-@media (min-width: 64em) {
-  .stacked-items {
-    display: grid; /* Change to grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    gap: 2em; /* Space between grid items */
-  }
-
-  .stacked-items li {
-    margin-bottom: 0; /* Remove bottom margin for grid layout */
-  }
-}
-
 /*********************************************************** Social media */
 section {
   padding: 2em 0; /* Vertical padding */
@@ -658,13 +523,6 @@ section {
   max-width: 10em; /* Max width for images */
   margin-bottom: 0.5em; /* Space below the image */
   border-radius: 50%; /* Circular images */
-}
-
-/* Responsive styles for larger screens */
-@media (min-width: 64em) {
-  .team-list {
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-  }
 }
 
 /*********************************************************** Footer */
@@ -740,31 +598,155 @@ video:not(:first-child) {
   border-radius: 1em; /* Optional: Rounded corners */
 }
 
-/* Media query for screens larger than 64em */
-@media (min-width: 64em) {
+/* Centered quote styling */
+.quote {
+  display: grid;
+  place-items: center; /* Center the content both horizontally and vertically */
+  text-align: center; /* Center text within the paragraph */
+}
+
+.quote p {
+  max-width: 50%; /* Limit the width of the paragraph */
+}
+
+
+/****************************************/
+/* @Media / Responsive for large screen */
+/****************************************/
+@media (min-width: 64em) /* Macbook measurements */ {
+  .main-header {
+    flex-direction: column;
+    align-items: left;
+    gap: 1em;
+
+    margin-right: auto;
+  }
+
+  /* All the articles that display text on one side and video on the other */
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article:nth-of-type(odd) {
+    grid-template-areas: "text video";
+  }
+
+  article:nth-of-type(even) {
+    grid-template-areas: "video text";
+  }
+
+  article video {
+    grid-area: video;
+    border-radius: 1em;
+  }
+
+  .text-header,
+  .text-content {
+    grid-area: text;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .text-content {
+    padding-top: 7em; /* To make the p go below the header */
+  }
+
+  /* The industries section */
+  .industries {
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .industries ul {
+    list-style-position: inside; /* Makes the bullet point go inside the list item (First element) */
+    padding-left: 0;
+  }
+
+  .industries h3 {
+    font-size: clamp(1.6em, 3vw + 0.5em, 2em);
+    margin: 0.5em 0;
+  }
+
+  .industries p {
+    font-size: clamp(1em, 2vw + 0.5em, 1.2em);
+    margin: 0.5em 0;
+  }
+
+  .left-content {
+    justify-content: center;
+    max-width: 40%;
+  }
+
+  .right-content {
+    margin-left: 5em;
+  }
+
+  /* The numbers of brand-ups etc. */
+  .industries-article {
+    display: flex;
+  }
+
+  .industries-list {
+    display: flex;
+    width: 100%;
+  }
+
+  .industries-list li {
+    text-align: center;
+  }
+
+  /* Carousel for the comments from different clients */
+  .carousel-list li {
+    flex: 0 0 20%; /* Set a specific width for each carousel item */
+    margin: 0 1.5%; /* Add margin to space out cards */
+  }
+
+  .carousel-list p {
+    max-width: 90%; /* Restrict the text width to prevent overflow */
+  }
+
+  .awards-card {
+    grid-template-columns: 2fr 1fr; /* 2 parts for text and 1 for images */
+    align-items: flex-start;
+  }
+
+  .awards-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-right: 1em;
+  }
+
+  ol {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on larger screens */
+  }
+
+  .stacked-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .team-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .media-container {
     grid-template-columns: 1fr 1fr; /* Two columns side by side */
     grid-auto-rows: auto; /* Automatically size rows based on content */
   }
 
-  /* Specific styles for the two videos to appear side by side */
+  /* Specific styles for the two videos to appear side by side on work page */
   .video-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-column: span 2; /* Allow the video pair to span both columns */
-    display: grid; /* Nested grid layout */
-    grid-template-columns: 1fr 1fr; /* Two columns for the videos */
-    gap: 20px; /* Space between the two videos */
+    gap: 1em;
   }
 }
-
-/* Centered quote styling */
-.quote {
-  display: grid; /* Use grid layout */
-  place-items: center; /* Center the content both horizontally and vertically */
-  text-align: center; /* Center text within the paragraph */
-}
-
-.quote > p {
-  max-width: 50%; /* Limit the width of the paragraph */
-}
-
-/*********************************************************** @Media / Responsive */
