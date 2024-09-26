@@ -245,17 +245,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Kaylee         |
-  | ---            |
-  | dit bespreken  |
-  | en dat ook nog |
-  | ...            |
+  | Bibi                | Audrey               | Sharon            | Kaylee                                   |
+  | ---                 | ---                  | ---               | ---                                      |
+  | Articles en sections| Ruimte gebruik       |                   | Live server werkt niet gelijk aan vs code|
+  | Javascript          | animaties            |                   | hoe een video continu af laten spelen?   |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
+  - Doe margin: 0; op de body aangezien die standaard ingesteld staat.
   - punt 2
   - nog een punt
   - ...
