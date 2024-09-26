@@ -5,7 +5,7 @@
   --color-text: #161715;
   --color-background: #f7f7f7;
 
-  --padding: 1em;
+  --padding: 2em;
   --border-radius: 1em;
   --font-size-heading: 2em;
   --margin: 1em;
@@ -50,17 +50,6 @@ body {
 /* TYPOGRAPHY */
 /**************/
 h1,
-h2,
-h3,
-a,
-li,
-h4,
-p,
-button {
-  margin-bottom: 0.5em;
-}
-
-h1,
 h4,
 p,
 button {
@@ -76,7 +65,6 @@ li {
 
 h1 {
   font-size: clamp(2em, 5vw + 1em, 4em);
-  text-align: left;
 }
 
 h2,
@@ -90,7 +78,6 @@ h4,
 p,
 button {
   font-size: clamp(0.9em, 2vw + 0.5em, 1.2em);
-  line-height: 1.6;
 }
 
 
@@ -101,7 +88,7 @@ button {
   position: fixed;
   top: 1em;
   left: 1em;
-  z-index: 1001;
+  z-index: 1001; /* For logo above the nav */
   display: inline-block;
   mix-blend-mode: difference;
   filter: invert();
@@ -114,20 +101,20 @@ button {
 /******************/
 .hamburger {
   position: fixed;
-  top: 10px;
-  right: 20px;
-  z-index: 1000;
+  top: 1em;
+  right: 1em;
+  z-index: 1000; /* For icons nav */
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 3em;
+  height: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hamburger svg {
-  width: 32px;
-  height: 32px;
+  width: 2em;
+  height: 2em;
   fill: none;
   stroke: var(--color-text);
   position: absolute;
@@ -170,7 +157,7 @@ button {
   height: 0; /* Set back to 0 for animation */
   background-color: var(--color-text);
   overflow: hidden;
-  z-index: 999;
+  z-index: 999; /* So that videos won't go over the nav */
   transition: height 0.3s ease-in-out;
   display: grid;
   grid-template-rows: repeat(3, auto); /* Allow three rows for links */
@@ -228,7 +215,6 @@ main,
 section {
   display: grid;
   gap: var(--gap-large);
-  margin: 0 auto;
   padding: 0 2em;
   max-width: 100%;
 }
@@ -238,7 +224,7 @@ main {
 }
 
 main > h1 {
-  margin-top: 1.5em;
+  margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -268,7 +254,7 @@ video {
   left: 0;
   width: 100%;
   height: auto;
-  margin: 2em 0;
+  border-radius: var(--border-radius);
 }
 
 #firstVideo {
@@ -357,7 +343,6 @@ article {
 .carousel-list ul {
   display: flex;
   padding: 0;
-  margin: 0;
   list-style: none; /* Remove list bullets */
   width: 100%; /* Ensure ul takes full width */
 }
@@ -417,7 +402,6 @@ article {
   color: var(--color-background); /* White text */
   border-radius: var(--border-radius);
   padding: var(--padding);
-  max-width: 64em;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr; /* Stack header and paragraph vertically by default */
@@ -426,12 +410,14 @@ article {
 
 .awards-text {
   text-align: left;
+  padding: 2em;
 }
 
 .awards-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 images per row */
   gap: var(--gap-small);
+  padding: 2em;
 }
 
 .awards-images img {
@@ -478,18 +464,18 @@ ol li p {
 /* Button styling */
 #viewButton,
 #sayButton {
-  height: 4.24em;
-  line-height: calc(4.25em - 4px + 0.125em);
-  border-radius: var(--border-radius);
+  height: 4em;
+  border-radius: 2em;
   padding-left: 2em;
   padding-right: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--gap-small);
-  border: 2px solid var(--color-text);
+  border: solid var(--color-text);
   background-color: var(--color-text);
   color: var(--color-background);
+  cursor: pointer;
 }
 
 
@@ -562,6 +548,7 @@ section {
   gap: var(--gap-small);
   justify-self: end;
   list-style-type: none;
+  margin: 0;
 }
 
 .social-media svg {
@@ -583,22 +570,6 @@ video:not(:first-child),
 .media-container img,
 .media-container video {
   border-radius: var(--border-radius);
-}
-
-/* Padding for section */
-.cobot-section {
-  padding: var(--padding);
-}
-
-/* Heading styling within cobot-section */
-.cobot-section h2 {
-  font-size: var(--font-size-heading);
-  margin-bottom: var(--margin);
-}
-
-/* Paragraph styling within cobot-section */
-.cobot-section p {
-  margin-bottom: var(--margin);
 }
 
 /* Grid layout for media container */
@@ -627,8 +598,6 @@ video:not(:first-child),
   .main-header {
     flex-direction: column;
     gap: var(--gap-small);
-
-    margin-right: auto;
   }
 
   /* All the articles that display text on one side and video on the other */
@@ -709,10 +678,15 @@ video:not(:first-child),
     text-align: center;
   }
 
-  /* Carousel for the comments from different clients */
+  /* Carousel */
+  .carousel-wrapper {
+    margin: 0 auto;
+  }
+  
   .carousel-list li {
     flex: 0 0 20%; /* Set a specific width for each carousel item */
     margin: 0 1.5%; /* Add margin to space out cards */
+    justify-content: center;
   }
 
   .carousel-list p {
@@ -721,15 +695,12 @@ video:not(:first-child),
 
   .awards-card {
     grid-template-columns: 2fr 1fr; /* 2 parts for text and 1 for images */
-    align-items: flex-start;
   }
 
   .awards-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    margin-right: var(--margin);
   }
 
   ol {
