@@ -84,7 +84,7 @@ button {
 /****************/
 /* LOGO STYLING */
 /****************/
-#logo {
+header > nav > a {
   position: fixed;
   top: 1em;
   left: 1em;
@@ -99,7 +99,7 @@ button {
 /******************/
 /* HAMBURGER MENU */
 /******************/
-.hamburger {
+label {
   position: fixed;
   top: 1em;
   right: 1em;
@@ -112,7 +112,7 @@ button {
   justify-content: center;
 }
 
-.hamburger svg {
+label svg {
   width: 2em;
   height: 2em;
   fill: none;
@@ -129,7 +129,7 @@ button {
 }
 
 /* Hide the checkbox input */
-#toggle {
+input {
   display: none;
 }
 
@@ -137,11 +137,11 @@ button {
 /***********************/
 /* HAMBURGER ANIMATION */
 /***********************/
-#toggle:checked + .hamburger .unchecked {
+inout:checked + label .unchecked {
   opacity: 0;
 }
 
-#toggle:checked + .hamburger .checked {
+input:checked + label .checked {
   opacity: 1;
 }
 
@@ -149,7 +149,7 @@ button {
 /****************/
 /* MENU STYLING */
 /****************/
-.nav {
+nav ul {
   position: fixed;
   top: 0;
   left: 0;
@@ -163,11 +163,11 @@ button {
   grid-template-rows: repeat(3, auto); /* Allow three rows for links */
 }
 
-.nav li {
+nav ul li {
   list-style: none;
 }
 
-.nav a {
+nav ul a {
   top: 1em;
   color: var(--color-background);
   font-size: clamp(1.8em, 3vw + 1em, 2.3em);
@@ -176,11 +176,11 @@ button {
 }
 
 /* Show menu items on toggle */
-#toggle:checked + .hamburger + .nav {
+input:checked + label + ul {
   height: 100%; /* Expand the menu */
 }
 
-#toggle:checked + .hamburger + .nav a {
+input:checked + label + ul a {
   opacity: 1; /* Fade in items */
 }
 
@@ -188,12 +188,12 @@ button {
 /*******************************************/
 /* HOVER EFFECT WITH WHITE LINE UNDER LINK */
 /*******************************************/
-.nav a {
+nav ul a {
   position: relative;
   display: inline-block;
 }
 
-.nav a::after {
+nav ul a::after {
   content: ""; /* To have space for the underline */
   position: absolute;
   width: 0;
@@ -203,7 +203,7 @@ button {
   left: 0;
 }
 
-.nav a:hover::after {
+nav ul li a:hover::after {
   width: 100%;
   transition: ease 0.5s;
 }
@@ -229,12 +229,12 @@ main > h1 {
   margin-bottom: 0.5em;
 }
 
-.main-header {
+main header {
   display: flex;
   flex-direction: column;
 }
 
-.main-header button,
+main header button,
 main button {
   background-color: var(--color-background);
   border: none;
@@ -253,7 +253,7 @@ video {
   border-radius: var(--border-radius);
 }
 
-#firstVideo {
+video:first-child {
   position: relative;
 }
 
@@ -285,7 +285,7 @@ article {
   flex-direction: column;
 }
 
-.right-content {
+section aside {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -295,7 +295,7 @@ article {
 /****************/
 /* LIST STYLING */
 /****************/
-.industries-list {
+.industries ol {
   padding: 0;
   list-style-type: none;
   text-align: center;
@@ -455,8 +455,7 @@ ol li p {
 }
 
 /* Button styling */
-#viewButton,
-#sayButton {
+.container-button > button {
   height: 4em;
   border-radius: 2em;
   padding-left: 2em;
@@ -536,7 +535,7 @@ footer {
 }
 
 /* Social media links */
-.social-media {
+footer ul {
   display: flex;
   gap: var(--gap-small);
   justify-self: end;
@@ -544,7 +543,7 @@ footer {
   margin: 0;
 }
 
-.social-media svg {
+footer ul svg {
   height: 0.5em;
   width: auto;
 }
@@ -588,7 +587,7 @@ video:not(:first-child),
 /* @MEDIA / RESPONSIVE FOR LARGE SCREEN */
 /****************************************/
 @media (min-width: 64em) /* Macbook measurements */ {
-  .main-header {
+  main header {
     flex-direction: column;
     gap: var(--gap-small);
   }
@@ -612,8 +611,8 @@ video:not(:first-child),
     border-radius: var(--border-radius);
   }
 
-  .text-header,
-  .text-content {
+  article h3,
+  article p {
     grid-area: text;
 
     display: flex;
@@ -622,7 +621,7 @@ video:not(:first-child),
     align-items: flex-start;
   }
 
-  .text-content {
+  .p-belowtext {
     padding-top: 7em; /* To make the p go below the header */
   }
 
@@ -653,7 +652,7 @@ video:not(:first-child),
     max-width: var(--max-width);
   }
 
-  .right-content {
+  section aside {
     margin-left: 5em;
   }
 
@@ -662,12 +661,12 @@ video:not(:first-child),
     display: flex;
   }
 
-  .industries-list {
+  .industries ol {
     display: flex;
     width: 100%;
   }
 
-  .industries-list li {
+  .industries ol li {
     text-align: center;
   }
 
