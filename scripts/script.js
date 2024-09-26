@@ -6,10 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Play the first video immediately
     if (firstVideo) {
-      firstVideo.muted = true; // The video is muted for autoplay
-      firstVideo.play().catch((error) => {
-        console.error("Error playing the first video:", error);
-      });
+      firstVideo.muted = false; // The video is muted for autoplay
     }
   
     const videos = document.querySelectorAll('video:not(#firstVideo)'); // Exclude the first video
