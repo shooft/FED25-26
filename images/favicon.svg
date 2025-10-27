@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
     <style>
-      .dark { fill: #002452; }
-      .light { fill: #70BF41; }
+      .dark { fill: #570706; }
+      .light { fill: #F39019; }
     </style>
   </defs>
 
